@@ -1,7 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import configureStore from './store/store'
+import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    ReactDOM.render(<h1>Fight on, Get Sweaty, Trojans!</h1>, root);
+    const store = configureStore();
+
+    // TEST STARTo
+    window.getState = store.getState;
+    window.dispatch = store.dispatch;
+    // TEST END
+
+    ReactDOM.render(<Root store={store } />, root);
 });
