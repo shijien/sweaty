@@ -7,6 +7,8 @@ const Greeting = ({ user, logout }) => {
             <div id="nav-container-logged-in">
                 <div id="greeting">
                     <nav id="nav-id">
+                        
+                        <Link className="sweatyLogo" to="/"><img src={window.logoUrl}/></Link>
                         <div className="nav nav-hover" id="routes">
                             Routes
                             <ul className="header-notifications">
@@ -45,12 +47,19 @@ const Greeting = ({ user, logout }) => {
         );
     } else {
         return (
-            <div id="greeting">
-                <div id="greeting-sign-in-container">
-                    <span id="login-link"><Link to='/login'>Log In</Link></span>
-                    <button id="signup-button"><Link to='/signup'>Sign Up</Link></button>
-                </div>
+          <div id="greeting">
+            <Link to="/">
+              <img src={window.logoUrl} />
+            </Link>
+            <div id="greeting-sign-in-container">
+              <span id="login-link">
+                <Link to="/login">Log In</Link>
+              </span>
+              <button id="signup-button">
+                <Link to="/signup">Sign Up</Link>
+              </button>
             </div>
+          </div>
         );
     }
 };

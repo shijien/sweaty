@@ -21,13 +21,17 @@
 
 class User < ApplicationRecord
     validates :username, :email, presence: true, uniqueness: true
-    validates :password, length: {minimum: 6, allow_nil: false}
+    validates :password, length: {minimum: 6, allow_nil: true}
     validates :session_token, presence: true, uniqueness: true
     validates :password_digest, presence: true
 
     after_initialize :ensure_session_token!
 
     attr_reader :password
+
+    has_many :exercises,
+    foreign_key: :user_id,
+    class_name: 'Exercise'
 
     
 
@@ -40,7 +44,7 @@ class User < ApplicationRecord
     end
 
     def is_password?(password)
-        BCrypt::Password.new(password).is_password?(password)
+        BCrypt::Password.new(self.password_digest).is_password?(password)
     end
 
     def password=(password)
@@ -50,6 +54,7 @@ class User < ApplicationRecord
 
 
     def reset_session_token!
+        # debugger
         self.session_token = SecureRandom::urlsafe_base64
         self.save!
         self.session_token

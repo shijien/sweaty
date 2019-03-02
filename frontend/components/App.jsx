@@ -10,7 +10,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
-    <div>
+    <div className="App">
         <header>
             <Route path='/' component={GreetingContainer} />
         </header>

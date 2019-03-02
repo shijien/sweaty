@@ -9,7 +9,6 @@
 #  session_token   :string           not null
 #  password_digest :string           not null
 #  username        :string           not null
-#  friend_id       :integer
 #  city            :string
 #  state           :string
 #  country         :string
