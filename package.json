@@ -29,6 +29,10 @@
     "postinstall": "./node_modules/.bin/webpack --mode=production",
     "start": "webpack --mode=development --watch"
   },
+  "engines": {
+    "node": "v10.13.0",
+    "npm": "6.4.1"
+  },
   "keywords": [
     "workout",
     "goal planner"
