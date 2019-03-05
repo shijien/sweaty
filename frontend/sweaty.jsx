@@ -5,8 +5,24 @@ import Root from './components/root';
 
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
-    const store = configureStore();
-
+    let store;
+    if (window.currentUser) {
+        // { id: 3, email: "test1", fname: "test1", lname: "test1", username: "test1" }
+        const userInfo = {
+            entities: {
+                users: {
+                    [window.currentUser.id]:  window.currentUser
+                }
+            },
+            session: {
+                id: window.currentUser.id
+            }
+        };
+        store = configureStore(userInfo);
+        window.currentUser = undefined;
+    } else {
+        store = configureStore();
+    }
     // TEST STARTo
     window.getState = store.getState;
     window.dispatch = store.dispatch;

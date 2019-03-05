@@ -13,7 +13,7 @@ export const receiveAllUsers = (users) => {
 export const fetchUsers = () => dispatch => {
     return (
         UsersApiUtil.fetchAllUsers().then(users => {
-            return dispatch(receiveAllUsers(users))
+            return dispatch(receiveAllUsers(users));
         })
-    )
+    );
 };

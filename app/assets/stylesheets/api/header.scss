@@ -3,32 +3,19 @@ header {
   background-color: #FFFFFF;
   color: #9A9EA9;
   display: flex;
-  height: 65px;
+  height: 90px;
   align-items: center;
   box-shadow: 0px 2px 14px 0px rgba(168,168,168,1);
   border-top: solid 1px #dbdbdb;
+  justify-content: space-around;
   width: 100%
 }
 
-header h1{
-  font-size: 18px;
-  font-weight: bold;
-  padding-left: 20px;
-  display: flex;
-  align-items: center;
-  background: -webkit-linear-gradient(#007AC2, #26BCF2);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
-header h1 span{
-  font-weight: normal;
-  font-size: 34px;
-}
 
-header img{
-  height: 65px;
-  width: 65px;
+.sweatyLogo{
+  height: 100px;
+  width: 95px; 
   margin-left: 15px;
 }
 
@@ -89,7 +76,7 @@ header img{
   font-weight: normal;
 }
 
-#routes, #workouts, #friends{
+#exercises, #goals, #friends{
   position: relative;
 }
 
@@ -107,11 +94,11 @@ header img{
   overflow: hidden;
 }
 
-#routes:hover .header-notifications {
+#exercises:hover .header-notifications {
   display: block;
 }
 
-#workouts:hover .header-notifications {
+#goals:hover .header-notifications {
   display: block;
 }
 
