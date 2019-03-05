@@ -10,7 +10,7 @@ const exerciseTypeTabComponent = (props) => {
     } else {
         return (
             <td className="exercise-td">
-                -
+                --
             </td>
         )
     }
@@ -22,7 +22,7 @@ const ExerciseIndexItem = (props) => {
         return null;
     }
 
-    debugger;
+    // debugger;
     return (
         <tr>
             <td className="exercise-td">

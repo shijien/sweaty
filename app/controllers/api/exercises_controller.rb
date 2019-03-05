@@ -5,7 +5,7 @@ class Api::ExercisesController < ApplicationController
   end
 
   def create
-    debugger
+    # debugger
     exercise_params[:start_lnt] = exercise_params[:start_lnt].to_f
     exercise_params[:start_lat] = exercise_params[:start_lat].to_f
     exercise_params[:end_lnt] = exercise_params[:end_lnt].to_f

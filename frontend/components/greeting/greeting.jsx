@@ -46,7 +46,14 @@ const Greeting = ({ user, logout }) => {
             </div>
             <div className="nav-menu" id="logout-greeting">
               <h3>Welcome {user.username}!</h3>
-              <button onClick={logout}>Logout</button>
+              <div className="nav nav-hover" id="profile-logo">
+                <img className="nav-avatar-img" src={window.profileUrl} width="34" height="34" />
+                <ul className="profile-logo-header-notifications">
+                  <li>Edit Profile</li>
+                  <li><button onClick={logout}>Logout</button></li>
+                  
+                </ul>
+              </div>
             </div>
           </nav>
         </div>

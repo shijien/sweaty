@@ -117,7 +117,7 @@ class ExerciseMap extends React.Component {
 
     function createRoutes(event) {
       //------searchbox need to be refactored --------//
-      debugger;
+      // debugger;
       
 
       ////////////////////////////////////////////////////////////
@@ -278,7 +278,7 @@ class ExerciseMap extends React.Component {
                     value={this.state.done}
                   />
                 </label>
-                <input type="submit" value="Save Exercise" />
+                <input className="exercisemap-submit" type="submit" value="Save Exercise" />
               </form>
               <label className="exercisemap-distance">
                 Distance

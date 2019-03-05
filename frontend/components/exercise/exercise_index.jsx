@@ -8,7 +8,7 @@ class ExerciseIndex extends React.Component {
   }
 
   componentDidMount() {
-    debugger
+    // debugger
     this.props.fetchExercises();
   }
 

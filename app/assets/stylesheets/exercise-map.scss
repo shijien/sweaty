@@ -9,16 +9,89 @@
   width: 60px;
 }
 
-@keyframes fade {
-  0% {
-    opacity: 0;
-  }
+.exercisemap-main {
+  display: flex;
+  justify-content: space-around;
+}
 
-  50% {
-    opacity: 0;
-  }
+.map-container {
+  width: 100%;
+  height: 900px;;
+  margin: auto;
+  margin-top: 50px;
+}
 
-  100% {
-    opacity: 1;
-  }
+.exercisemap-sidebar {
+  width: 340px;
+  display: flex;
+  flex-direction: column;
+  border: 1px grey solid;
+}
+
+.exercisemap-searchbox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercisemap-searchbox-cap {
+  height: 30px;
+  background-color: #EFEFEF;
+  color: #444444;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.exercisemap-details {
+  height: 190px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.exercisemap-details-cap {
+  height: 30px;
+  background-color: #EFEFEF;
+  color: #444444;
+  font-size: 18px;
+  padding-left: 10px;
+}
+
+.exercisemap-details-body{
+  background-color: #FFFFFF;
+  color: #505050;
+}
+
+.exercisemap-submit {
+  background-color: #FF9527;
+  color: #FFFFFF;
+  text-align: center;
+  width: 130px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 4px;
+}
+
+.exercisemap-details-body .exercisemap-submit:hover{
+    background-color: #EC800F;
+    transition: background 0.5s ease-in-out;
+}
+
+.exercisemap-details-body form label{
+  color: red;
+  font-size: 24px;
+  padding-right: 5px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.exercisemap-distance{
+  width: 230px;
+  background-color: #636363;
+  margin-left: 5px;
+  text-align: center;
+  font-size: 24px;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
 }
