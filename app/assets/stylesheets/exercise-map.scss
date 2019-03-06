@@ -1,9 +1,3 @@
-.exercisemap-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
 .exercisemap-nav li {
   display: block;
   width: 60px;
@@ -18,7 +12,6 @@
   width: 100%;
   height: 900px;;
   margin: auto;
-  margin-top: 50px;
 }
 
 .exercisemap-sidebar {
@@ -34,12 +27,18 @@
   flex-direction: column;
 }
 
-.exercisemap-searchbox-cap {
+.exercisemap-searchbox-cap, .exercisemap-exercisetype {
   height: 30px;
   background-color: #EFEFEF;
   color: #444444;
   font-size: 18px;
   padding-left: 10px;
+}
+
+.exercisemap-exercisetype {
+  justify-content: left;
+  width: 320px;
+  height:45px;
 }
 
 .exercisemap-details {
@@ -65,11 +64,13 @@
 .exercisemap-submit {
   background-color: #FF9527;
   color: #FFFFFF;
-  text-align: center;
-  width: 130px;
+  width: 100px;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 4px;
+  align-self: center;
+  text-align: center;
+  text-shadow: #505050;
 }
 
 .exercisemap-details-body .exercisemap-submit:hover{
@@ -78,20 +79,77 @@
 }
 
 .exercisemap-details-body form label{
-  color: red;
+  color: green;
   font-size: 24px;
   padding-right: 5px;
   display: flex;
   justify-content: space-around;
 }
 
+.exercisemap-details-body > form {
+  margin: 0;
+}
+
 .exercisemap-distance{
   width: 230px;
-  background-color: #636363;
+  background-color: #0ed149;
   margin-left: 5px;
   text-align: center;
   font-size: 24px;
   color: #FFFFFF;
   display: flex;
   flex-direction: column;
+  position: relative;
+  left: 335px;
+  z-index: 5;
+  opacity: 0.5
+}
+
+.exercisemap-distance:hover {
+  opacity: 1;
+}
+
+
+
+.exercisemap-duration {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.exercisemap-duration-cap {
+  margin: 7px;
+  width: 80px;
+  height: 45px;
+  background-color: #636363;;
+  color: white;
+  font-size: 20px;
+  text-align: center
+}
+.exercisemap-duration-hours, .exercisemap-duration-minutes, .exercisemap-duration-seconds {
+  width: 60px;
+  display: inline;
+
+}
+
+.exercisemap-checkbox {
+  display: flex;
+  justify-content: space-around;
+}
+
+.exercisemap-checkbox-cap {
+  margin: 7px;
+  padding: 5px;
+  width: 80px;
+  height: 45px;
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  text-align: center;
+}
+
+.exercisemap-checkbox-body {
+  width: 45px;
+  hegith: 45px;
 }

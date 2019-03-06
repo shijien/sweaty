@@ -1,0 +1,33 @@
+
+.main-navbar{
+  width: 1200px;
+  height: 40px;
+  display: flex;
+  background-color: #F0F2F4;
+  margin-top: 40px;
+  align-self: center;
+}
+
+.main-navbar-box{
+  width: 400px;
+  height: 40px;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  border-bottom: 1px solid #dddddd;
+  color: #6D717A;
+  font-size: 20px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 5px;
+  
+
+}
+
+
+.main-navbar-box:hover{
+  color: #222628;
+  border-bottom: 1px solid #222628;
+}

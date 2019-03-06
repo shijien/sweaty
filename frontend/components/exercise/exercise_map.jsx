@@ -13,7 +13,7 @@ class ExerciseMap extends React.Component {
       startLnt: 0,
       startLat: 0,
       endLnt: 0,
-      endLat: 0
+      endLat: 0,
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -201,7 +201,7 @@ class ExerciseMap extends React.Component {
       map: this.state.polyline,
       name: this.state.name,
       done: this.state.done,
-      duration: this.state.duration,
+      duration: this.state.hour * 3600  + this.state.minutes * 60 + this.state.seconds,
       exercise_type: this.state.exerciseType,
       start_lnt: this.state.startLnt,
       start_lat: this.state.startLat,
@@ -227,7 +227,7 @@ class ExerciseMap extends React.Component {
             </div>
           </div>
           <div className="exercisemap-details">
-            <div className="exercisemap-details-cap">Exercise Details</div>
+            <div className="exercisemap-details-cap"><span className="expand-indicator"></span>Exercise Details</div>
             <div className="exercisemap-details-body">
               <form onSubmit={this.handleSubmit}>
                 <label>
@@ -251,7 +251,7 @@ class ExerciseMap extends React.Component {
                     className="exercisemap-exercisetype"
                     onChange={e => this.updateDropdown(e)}
                   >
-                    <option value="" defaultValue disabled>
+                    <option value="" selected defaultValue disabled>
                       Select your exercise
                     </option>
                     <option value="in-place">in-place</option>
@@ -262,28 +262,51 @@ class ExerciseMap extends React.Component {
                   </select>
                 </label>
                 <label>
+            
+                  <div className="exercisemap-duration">
+                    <div className="exercisemap-duration-cap">Duration</div>
                   <input
                     type="number"
-                    className="exercisemap-distance"
-                    onChange={this.update("duration")}
-                    value={this.state.duration}
-                    placeholder="Duration"
+                    className="exercisemap-duration-hours"
+                    onChange={this.update("hours")}
+                    value={this.state.hours}
+                    placeholder="hh"  
+                  />:
+                  <input
+                    type="number"
+                    className="exercisemap-duration-minutes"
+                    onChange={this.update("minutes")}
+                    value={this.state.minutes}
+                    placeholder="mm"  
+                  />:
+                  <input
+                    type="number"
+                    className="exercisemap-duration-seconds"
+                    onChange={this.update("seconds")}
+                    value={this.state.seconds}
+                    placeholder="ss"  
                   />
+                  </div>
                 </label>
                 <label>
+                  <div className="exercisemap-checkbox">
+                  <div className="exercisemap-checkbox-cap">Complete?</div>
                   <input
                     type="checkbox"
-                    className="exercisemap-checkbox"
+                    className="exercisemap-checkbox-body"
                     onChange={e => this.updateCheckBox(e)}
                     value={this.state.done}
                   />
+                  </div>
                 </label>
-                <input className="exercisemap-submit" type="submit" value="Save Exercise" />
+                <input className="exercisemap-submit" type="submit" value="Save" />
               </form>
-              <label className="exercisemap-distance">
+              <div className="exercisemap-distance">
+              <label>
                 Distance
                 <div>{distance.toFixed(2)}&nbsp;mile</div>
               </label>
+              </div>
             </div>
           </div>
         </section>

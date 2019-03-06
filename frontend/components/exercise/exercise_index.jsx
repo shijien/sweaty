@@ -19,9 +19,8 @@ class ExerciseIndex extends React.Component {
     return (
       <div className="exercises-index">
         <div className="exercise-tag">
-          <div>MY EXERCISES</div>
           <Link to="/exercises/create/">
-            <button>CREATE A EXERCISE</button>
+            <button className="create-exercise-button">CREATE A EXERCISE</button>
           </Link>
         </div>
         <hr />
