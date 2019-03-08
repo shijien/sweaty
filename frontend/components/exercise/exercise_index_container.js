@@ -5,7 +5,6 @@ import {searchExercises} from '../../actions/search_actions';
 
 const mSP = (state, ownProps) => {
     return {
-        
         exercises: Object.values(state.entities.exercises)
     };
 };

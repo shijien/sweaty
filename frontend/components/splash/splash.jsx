@@ -73,8 +73,8 @@ class Splash extends React.Component {
                 <li><Link to="/all_exercises/los%20angeles">LOS ANGELES</Link></li>
                 <li><Link to="/all_exercises/hong%20kong">HONG KONG</Link></li>
                 <li><Link to="/all_exercises/san%20francisco">SAN FRANCISCO</Link></li>
-                <li><Link to="/all_exercises/paris">PARIS</Link></li>
                 <li><Link to="/all_exercises/johannesburg">JOHANNESBURG</Link></li>
+                <li><Link to="/all_exercises">ALL EXERCISES</Link></li>
               </ul>
             </div>
           </div>

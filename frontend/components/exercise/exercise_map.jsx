@@ -6,7 +6,7 @@ class ExerciseMap extends React.Component {
     super(props);
     this.state = {
       polyline: "",
-      location: "San Franciso",
+      location: "Fill the city",
       duration: 0,
       name: "",
       done: false,

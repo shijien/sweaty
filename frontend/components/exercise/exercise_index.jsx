@@ -41,7 +41,7 @@ class ExerciseIndex extends React.Component {
           <tbody>
               {
                   this.props.exercises.map(exercise => {
-                      return <ExerciseIndexItem exercise={exercise} deleteExercise={this.props.deleteExercise}/>
+                      return <ExerciseIndexItem exercise={exercise} userId={this.props.userId} deleteExercise={this.props.deleteExercise}/>
                   })
               }
           </tbody>

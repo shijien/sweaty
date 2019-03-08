@@ -16,6 +16,19 @@ const exerciseTypeTabComponent = (props) => {
     }
 };
 
+const exeOptions = (props) => {
+    if (props && props.exercise && props.userId) {
+        return (
+            <td className="exercise-td">
+                <span className="exercise-options">Edit</span>
+                <button className="exercise-options" onClick={() => props.deleteExercise(props.exercise.id)}>Delete</button>
+            </td>
+        );
+    } else {
+        return <td></td>;
+    }
+}
+
 
 const ExerciseIndexItem = (props) => {
     if (!props.exercise) {
@@ -32,10 +45,7 @@ const ExerciseIndexItem = (props) => {
             {exerciseTypeTabComponent(props)}
             <td className="exercise-td">{props.exercise.name}</td>
             <td className="exercise-td">{props.exercise.location}</td>
-            <td className="exercise-td">
-                <span className="exercise-options">Edit</span>
-                <button className="exercise-options" onClick={() => props.deleteExercise(props.exercise.id)}>Delete</button>
-            </td>
+            {exeOptions(props)}
         </tr>
     );
 };
