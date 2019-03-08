@@ -34,12 +34,23 @@
 }
 
 .search_item_container {
+    padding: 3px;
     display: flex;
     margin-bottom: 5px;
+    margin: 5px;
+    border: 1px solid;
+}
+
+.search_item_container:hover {
+    background-color: grey;
 }
 
 .add_friend_button {
-  
+    margin-left: 30px;
+    background-color: black;
+    padding: 2px;
+    color: white;
+
 }
 
 .search_item {

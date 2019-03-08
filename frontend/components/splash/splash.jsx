@@ -62,14 +62,14 @@ class Splash extends React.Component {
 
             <div className="cities">
               <ul className="cityList">
-                <li>New York, NY</li>
-                <li>Manhattan, NY</li>
-                <li>San Francisco, CA</li>
+                <li>NEW YORK</li>
+                <li>PARIS</li>
+                <li>SAN FRANCISCO</li>
               </ul>
               <ul className="cityList">
-                <li>New York, NY</li>
-                <li>Manhattan, NY</li>
-                <li>Boston, MA</li>
+                <li>LOS ANGELES</li>
+                <li>HONG KONG</li>
+                <li>LONDON</li>
               </ul>
             </div>
           </div>
