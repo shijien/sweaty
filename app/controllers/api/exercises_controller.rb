@@ -5,7 +5,6 @@ class Api::ExercisesController < ApplicationController
   end
 
   def create
-    # debugger
     exercise_params[:start_lnt] = exercise_params[:start_lnt].to_f
     exercise_params[:start_lat] = exercise_params[:start_lat].to_f
     exercise_params[:end_lnt] = exercise_params[:end_lnt].to_f
@@ -15,7 +14,6 @@ class Api::ExercisesController < ApplicationController
 
 
     @exercise = Exercise.new(exercise_params)
-    # debugger
     if @exercise.save
       render :show
     else

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_01_013336) do
+ActiveRecord::Schema.define(version: 2019_03_06_051443) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,24 @@ ActiveRecord::Schema.define(version: 2019_03_01_013336) do
     t.index ["exercise_type"], name: "index_exercises_on_exercise_type"
     t.index ["location"], name: "index_exercises_on_location"
     t.index ["user_id"], name: "index_exercises_on_user_id"
+  end
+
+  create_table "friend_requests", force: :cascade do |t|
+    t.integer "request_from_id", null: false
+    t.integer "request_to_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["request_from_id"], name: "index_friend_requests_on_request_from_id"
+    t.index ["request_to_id"], name: "index_friend_requests_on_request_to_id"
+  end
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer "from_user_id", null: false
+    t.integer "to_user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["from_user_id"], name: "index_friendships_on_from_user_id"
+    t.index ["to_user_id"], name: "index_friendships_on_to_user_id"
   end
 
   create_table "users", force: :cascade do |t|

@@ -8,7 +8,6 @@ class ExerciseIndex extends React.Component {
   }
 
   componentDidMount() {
-    // debugger
     this.props.fetchExercises();
   }
 
@@ -30,7 +29,6 @@ class ExerciseIndex extends React.Component {
               <th>Map</th>
               <th>Created</th>
               <th>Distance</th>
-              <th>Elevation</th>
               <th>Name</th>
               <th>City</th>
               <th>Options</th>

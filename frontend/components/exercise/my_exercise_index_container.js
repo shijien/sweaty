@@ -4,7 +4,6 @@ import { fetchExercises, deleteExercise } from '../../actions/exercise_actions';
 
 const mSP = (state, ownProps) => {
 
-    // debugger;
     return {
         exercises: Object.values(state.entities.exercises).filter(exercise => exercise.userId === state.session.id),
         userId: state.session.id

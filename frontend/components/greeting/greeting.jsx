@@ -39,9 +39,11 @@ const Greeting = ({ user, logout }) => {
               Friends
               <ul className="header-notifications">
                 <li>
-                  <Link to="/user/friends">My Friends</Link>
+                  <Link to="/friends/my_friends">My Friends</Link>
                 </li>
-                <li>Find Friends</li>
+                <li>
+                  <Link to="/friends/find_friends">Find Friends</Link>
+                </li>
               </ul>
             </div>
             <div className="nav-menu" id="logout-greeting">
@@ -50,6 +52,7 @@ const Greeting = ({ user, logout }) => {
                 <img className="nav-avatar-img" src={window.profileUrl} width="34" height="34" />
                 <ul className="profile-logo-header-notifications">
                   <li>Edit Profile</li>
+                  <li><Link to='/friends'>Friends</Link></li>
                   <li><button onClick={logout}>Logout</button></li>
                   
                 </ul>

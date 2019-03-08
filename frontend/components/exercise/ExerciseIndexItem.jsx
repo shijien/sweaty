@@ -22,7 +22,6 @@ const ExerciseIndexItem = (props) => {
         return null;
     }
 
-    // debugger;
     return (
         <tr>
             <td className="exercise-td">
@@ -31,7 +30,6 @@ const ExerciseIndexItem = (props) => {
             </td>
             <td className="exercise-td">{props.exercise.createdAt}</td>
             {exerciseTypeTabComponent(props)}
-            <td classsName="exercise-td">500 ft</td>
             <td className="exercise-td">{props.exercise.name}</td>
             <td className="exercise-td">{props.exercise.location}</td>
             <td className="exercise-td">

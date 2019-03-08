@@ -30,8 +30,34 @@ class User < ApplicationRecord
     attr_reader :password
 
     has_many :exercises,
-    foreign_key: :user_id,
-    class_name: 'Exercise'
+        foreign_key: :user_id,
+        class_name: :Exercise
+        
+    has_many :send_friend_requests,
+        foreign_key: :request_from_id,
+        class_name: :FriendRequest
+    
+    has_many :receive_friend_requests,
+        foreign_key: :request_to_id,
+        class_name: :FriendRequest
+
+    has_many :from_friendships,
+        foreign_key: :from_user_id,
+        class_name: :Friendship
+    
+    has_many :to_friendships,
+        foreign_key: :to_user_id,
+        class_name: :Friendship
+    
+    has_many :from_friends,
+        through: :to_friendships,
+        source: :from_user
+    
+    has_many :to_friends,
+        through: :from_friendships,
+        source: :to_user
+    
+    
 
     
 

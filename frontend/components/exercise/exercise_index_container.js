@@ -10,7 +10,6 @@ const mSP = (state, ownProps) => {
 };
 
 const mDP = (dispatch, ownProps) => {
-    // debugger
     return {
         fetchExercises: () => dispatch(fetchExercises()),
         deleteExercise: (exerciseId) => dispatch(deleteExercise(exerciseId))

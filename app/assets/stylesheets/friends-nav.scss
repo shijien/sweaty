@@ -1,0 +1,34 @@
+.friends-nav-bar-container{
+  margin:auto;
+  margin-top: 30px;
+  border-bottom: 1px solid #D1D0CF;
+  color: black;
+}
+
+.friends-nav-bar-body {
+  display: flex;
+  height: 45px;
+  border-bottom: 1px solid #D1D0CF;
+}
+
+.friends-nav-bar-cap {
+  font-size: 30px;
+}
+
+.friends-navbar-box{
+  border-top: 1px solid #D1D0CF;
+  border-bottom: 3px solid #FFFFFF;
+  width: 262px;
+  font-size: 20px;
+  padding-top: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.friends-navbar-box:hover{
+    border-top: 2px solid rgb(37, 184, 37);
+    box-shadow: 0 2px 3px rgba(63, 63, 63, 0.2);
+    opacity:0.8;
+    
+}
+

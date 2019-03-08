@@ -19,7 +19,6 @@ class ExerciseMap extends React.Component {
   }
   componentDidMount() {
     let map, infoWindow, marker;
-    // debugger;
     map = new google.maps.Map(this.mapNode, {
       center: { lat: 37.7997108, lng: -122.4067626 },
       zoom: 15
@@ -99,38 +98,16 @@ class ExerciseMap extends React.Component {
     });
 
     google.maps.event.addListener(map, "click", createRoutes.bind(this));
-    // google.maps.event.addListener(marker, "click", createRoutes.bind(this));
-
-    // function removePoint(markers, marker, polyLine) {
-    //   for (let i = 0; i < markers.length; i++) {
-
-    //     if (markers[i].position.lat() === marker.position.lat() && markers[i].position.lng() === marker.position.lng()) {
-    //       markers[i].setMap(null);
-    //       markers.splice(i, 1);
-    //       polyLine.getPath().removeAt(i);
-    //       polyLine.setPath(path);
-    //     }
-    //   }
-    // }
-
     
 
     function createRoutes(event) {
-      //------searchbox need to be refactored --------//
-      // debugger;
-      
-
-      ////////////////////////////////////////////////////////////
 
       marker = new google.maps.Marker({
         position: event.latLng,
         map: map
       });
       markers.push(marker);
-      // google.maps.event.addListener(marker, "click", function(event) {
-      //   removePoint(markers, marker, polyLine);
-      // });
-      // debugger;
+
       if (path.getLength() === 0) {
         path.push(event.latLng);
         polyLine.setPath(path);

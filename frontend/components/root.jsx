@@ -2,13 +2,17 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import { HashRouter } from 'react-router-dom';
 import App from './App';
+import Lodash from 'lodash';
 
-const Root = ({ store }) => (
+const Root = ({ store }) => {
+    window.Lodash = Lodash;
+    
+    return (
     <Provider store={store}>
         <HashRouter>
             <App />
         </HashRouter>
     </Provider>
-);
+)};
 
 export default Root;
