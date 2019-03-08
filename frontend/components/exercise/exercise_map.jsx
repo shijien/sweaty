@@ -135,7 +135,6 @@ class ExerciseMap extends React.Component {
                 path.push(result.routes[0].overview_path[i]);
               }
             }
-            debugger
             let encodeString = google.maps.geometry.encoding.encodePath(path);
             let lengthInMeters = google.maps.geometry.spherical.computeLength(path);
             this.setState({

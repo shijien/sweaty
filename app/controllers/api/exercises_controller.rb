@@ -12,7 +12,6 @@ class Api::ExercisesController < ApplicationController
     exercise_params[:duration] = exercise_params[:duration].to_i
     exercise_params[:user_id] = exercise_params[:user_id].to_i
     exercise_params[:distance] = exercise_params[:distance].to_f
-    debugger
 
     @exercise = Exercise.new(exercise_params)
     if @exercise.save
