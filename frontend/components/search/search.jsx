@@ -68,7 +68,7 @@ class Search extends React.Component {
     if (!is_friend && user.id !== currentUserId) {
       if (has_request_from === false && has_request_to === false) {
         return (
-          <button
+          <button className="add_friend_button-add"
             onClick={() =>
               this.props.createRequest({
                 request_from_id: currentUserId,
@@ -76,14 +76,14 @@ class Search extends React.Component {
               }).then(() => window.location.reload())
             }
           >
-            Add Friends
+            ADD
           </button>
         );
       } else if (has_request_from === false && has_request_to === true) {
-        return <button disabled>Pending</button>;
+        return <button className="add_friend_button" disabled>PEND</button>;
       } else if (has_request_from === true && has_request_to === false) {
         return (
-          <button
+          <button className="add_friend_button-accept"
             onClick={() =>
               this.props.createFriend({
                 from_user_id: currentUserId,
@@ -91,12 +91,12 @@ class Search extends React.Component {
               }).then(() => window.location.reload())
             }
           >
-            Accept
+            ACCEPT
           </button>
         );
       }
     } else {
-      return null;
+      return <div className="blank-button"></div>;
     }
   }
 
@@ -117,7 +117,7 @@ class Search extends React.Component {
                   getRequest={this.props.getRequest}
                   fetchFriends={this.props.fetchFriends}
                 />
-                <div className="add_friend_button">
+                <div>
                   {this.handleAddFriendButton(
                     this.props.searchedUsers[obj],
                     this.props.currentUserId

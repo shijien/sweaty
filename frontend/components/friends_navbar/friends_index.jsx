@@ -21,7 +21,7 @@ class FriendsIndex extends React.Component {
           {this.props.friends.map(el => {
             return (
               <li className="friends-index-list-box">
-                <div>{el.fname}</div><div>{el.lname}</div>
+                <div><img className="friends-img" src={window.profileUrl} /></div><div>{el.fname}</div><div>{el.lname}</div>
               </li>
             );
           })}

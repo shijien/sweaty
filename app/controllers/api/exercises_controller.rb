@@ -1,6 +1,10 @@
 class Api::ExercisesController < ApplicationController
   def index
-    @exercises = Exercise.all
+    if !keyword_query
+      @exercises = Exercise.all
+    else
+      @exercises = Exercise.where("location ILIKE ?","%#{keyword_query}%")
+    end
     render 'api/exercises/index'
   end
 
@@ -53,6 +57,10 @@ class Api::ExercisesController < ApplicationController
   private
   def exercise_params
     params.require(:exercise).permit(:map, :name, :exercise_type, :location, :distance, :start_lnt, :start_lat, :end_lnt, :end_lat, :duration, :user_id, :done)
+  end
+
+  def keyword_query
+    params[:keyword]
   end
 end
 

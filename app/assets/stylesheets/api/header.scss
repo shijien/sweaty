@@ -22,6 +22,8 @@ header {
 .nav-avatar-img{
   height: 50px;
   width: 95px;
+  border-radius: 50%;
+  margin: 10px auto;
 }
 
 #nav-id{
@@ -41,6 +43,11 @@ header {
 .nav-hover:hover{
   color: black;
 }
+.nav-menu h3 {
+    font-size: 30px;
+    color: black;
+    padding: 2px;
+}
 
 #logout-greeting{
   display: flex;
@@ -55,12 +62,12 @@ header {
 }
 
 #greeting{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  width: 960px;
-  margin: auto;
+      display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    min-width: 1700px;
+    margin: auto;
 }
 
 

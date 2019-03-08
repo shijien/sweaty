@@ -5,3 +5,10 @@ export const searchUsers = (data) => {
         data: { data }
     });
 };
+
+export const searchExercises = (keyword) => {
+    return $.ajax({
+        method: 'GET',
+        url: `/api/exercises/?keyword=${keyword}`
+    });
+}

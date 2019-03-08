@@ -29,6 +29,7 @@ const App = () => (
         <Switch>
             <ProtectedRoute path='/exercises/create' component={ExerciseMapContainer} />
             <ProtectedRoute path='/my_home/my_exercises' component={MyExerciseIndexContainer} />
+            <Route path='/all_exercises/:loc' component={ExerciseIndexContainer} />
             <Route path='/all_exercises' component={ExerciseIndexContainer} />
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />

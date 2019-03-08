@@ -16,14 +16,23 @@
 .friends-index-list-box {
     margin: 10px;
     padding: 2px;
-    width: 200px;
+    width: 300px;
     border-bottom: 1px solid grey;
     text-align: -webkit-center;
+    display: flex;
+    align-items: center;
 }
 
 .friends-index-list-box div {
     display: inline-block;
     margin: 5px;
+}
 
 
+
+.friends-img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin-right: 30px;
 }

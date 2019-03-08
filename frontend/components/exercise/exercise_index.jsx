@@ -8,7 +8,11 @@ class ExerciseIndex extends React.Component {
   }
 
   componentDidMount() {
-    this.props.fetchExercises();
+    if (!this.props.match.params.loc) {
+      this.props.fetchExercises();
+    } else {
+      this.props.searchExercises(this.props.match.params.loc);
+    }
   }
 
   render() {

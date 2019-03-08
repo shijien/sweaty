@@ -170,17 +170,15 @@
 
 .cityList{
     position: absolute;
-    left:80%;
-    top:60%;
-    /*transform: translate(-50%,-50%);*/
-    width:400px;
-    height:400px;
+    left: 60%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 600px;
     text-align: center;
-
     background: inherit;
-    z-index:11;
-
-    box-shadow:  0 0 10px 6px rgba(0,0,0,.5);
+    z-index: 11;
+    box-shadow: 0 0 10px 6px rgba(0, 0, 0, 0.5);
     color: white;
     display: flex;
     flex-direction: column;
@@ -188,4 +186,8 @@
 
 .cityList li{
     margin: 50px;
+}
+
+.white-bar {
+  
 }

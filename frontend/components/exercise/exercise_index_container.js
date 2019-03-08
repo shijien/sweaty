@@ -1,6 +1,7 @@
 import {connect} from 'react-redux';
 import ExerciseIndex from './exercise_index';
 import {fetchExercises, deleteExercise} from '../../actions/exercise_actions';
+import {searchExercises} from '../../actions/search_actions';
 
 const mSP = (state, ownProps) => {
     return {
@@ -11,6 +12,7 @@ const mSP = (state, ownProps) => {
 
 const mDP = (dispatch, ownProps) => {
     return {
+        searchExercises: (keyword) => dispatch(searchExercises(keyword)),
         fetchExercises: () => dispatch(fetchExercises()),
         deleteExercise: (exerciseId) => dispatch(deleteExercise(exerciseId))
     };

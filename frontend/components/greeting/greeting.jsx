@@ -1,6 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+const sloganList = [
+  "Don't stop!", 
+  "Be an inspiration.",
+  "Celebrating health.",
+  "Commit to be fit."
+];
+
+const randomShowSloganTab = sloganList => {
+  let randomIndex = Math.floor(Math.random() * Math.floor(sloganList.length));
+  return (
+    <div className="slogan-tab">
+        {sloganList[randomIndex]}
+    </div>
+  );
+};
+
 const Greeting = ({ user, logout }) => {
   if (user) {
     return (
@@ -47,7 +63,7 @@ const Greeting = ({ user, logout }) => {
               </ul>
             </div>
             <div className="nav-menu" id="logout-greeting">
-              <h3>Welcome {user.username}!</h3>
+              <h3>{randomShowSloganTab(sloganList)}</h3>
               <div className="nav nav-hover" id="profile-logo">
                 <img className="nav-avatar-img" src={window.profileUrl} width="34" height="34" />
                 <ul className="profile-logo-header-notifications">

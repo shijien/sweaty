@@ -28,17 +28,29 @@ export const receiveErrors = (errors) => {
 
 
 export const signup = user => dispatch => (
-    APIUtil.signup(user).then(user => (
-        dispatch(receiveCurrentUser(user))
-    ), err => (
+    APIUtil.signup(user).then(payload => {
+        swal({
+            title: `Welcome!, ${payload.user.fname}!`,
+            text: "Let's get sweaty!",
+            icon: "success",
+            button: "GO!",
+        });
+        return dispatch(receiveCurrentUser(payload));
+     }, err => (
         dispatch(receiveErrors(err.responseJSON))
     ))
 );
 
 export const login = user => dispatch => (
-    APIUtil.login(user).then(user => (
-        dispatch(receiveCurrentUser(user))
-    ), err => (
+    APIUtil.login(user).then(payload => {
+        swal({
+            title: `Welcome back, ${payload.user.fname}!`,
+            text: "Get sweaty! Keep strong!",
+            icon: "success",
+            button: "GO!",
+        });
+        return dispatch(receiveCurrentUser(payload));
+    }, err => (
         dispatch(receiveErrors(err.responseJSON))
     ))
 );

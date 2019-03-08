@@ -7,8 +7,8 @@ class Splash extends React.Component {
         this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick(user) {
-        this.props.login(user)
+    handleClick() {
+        this.props.login(this.props.user);
     }
     
     render() {
@@ -38,13 +38,14 @@ class Splash extends React.Component {
                     <p className="logInQuestion">
                       <span>Already a member?</span>
                     </p>
-                    <button className="LoginButton">
-                      <Link to="/login">LOG IN</Link>
+                    <button className="LoginButton" onClick={this.handleClick}>
+                      LOG IN DEMO
                     </button>
                   </div>
                 </div>
               </div>
             </div>
+            <div className="white-bar"></div>
 
             <div className="findYourPath">
               <h2>
@@ -60,6 +61,8 @@ class Splash extends React.Component {
               </p>
             </div>
 
+            <div className="white-bar"></div>
+
             <div className="cities">
               <ul className="cityList">
                 <li>NEW YORK</li>
@@ -67,9 +70,11 @@ class Splash extends React.Component {
                 <li>SAN FRANCISCO</li>
               </ul>
               <ul className="cityList">
-                <li>LOS ANGELES</li>
-                <li>HONG KONG</li>
-                <li>LONDON</li>
+                <li><Link to="/all_exercises/los%20angeles">LOS ANGELES</Link></li>
+                <li><Link to="/all_exercises/hong%20kong">HONG KONG</Link></li>
+                <li><Link to="/all_exercises/san%20francisco">SAN FRANCISCO</Link></li>
+                <li><Link to="/all_exercises/paris">PARIS</Link></li>
+                <li><Link to="/all_exercises/johannesburg">JOHANNESBURG</Link></li>
               </ul>
             </div>
           </div>

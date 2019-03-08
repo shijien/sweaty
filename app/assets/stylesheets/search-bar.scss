@@ -36,6 +36,7 @@
 .search_item_container {
     padding: 3px;
     display: flex;
+    justify-content: space-between;
     margin-bottom: 5px;
     margin: 5px;
     border: 1px solid;
@@ -45,12 +46,47 @@
     background-color: grey;
 }
 
+.add_friend_button-add {
+    margin-left: 30px;
+    background-color: black;
+    color: white;
+    width: 35px;
+    padding: 5px;
+    text-align: center;
+
+}
+
+.add_friend_button-add:hover {
+    margin-left: 30px;
+    background-color: rgb(255, 81, 0);
+    color: black;
+    padding: 5px;
+}
+
+
+.add_friend_button-accept {
+    margin-left: 30px;
+    background-color: black;
+    color: white;
+    width: 35px;
+    padding: 5px;
+    text-align: center;
+}
+
+.add_friend_button-accept:hover {
+    margin-left: 30px;
+    background-color: rgb(0, 165, 27);
+    color: black;
+    padding: 5px;
+}
+
 .add_friend_button {
     margin-left: 30px;
     background-color: black;
-    padding: 2px;
     color: white;
-
+    width: 35px;
+    padding: 5px;
+    text-align: center;
 }
 
 .search_item {
@@ -76,5 +112,10 @@
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+}
+
+.blank-button {
+  background-color: white;
+  
 }
 

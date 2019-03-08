@@ -4,8 +4,8 @@ import Splash from '../splash/splash'
 
 const mSP = (state, ownProps) => {
     return {
-        demo: {
-            email: 'alec123@gmail.com',
+        user: {
+            email: 'demo@gmail.com',
             password: '111111'
         }
     };
