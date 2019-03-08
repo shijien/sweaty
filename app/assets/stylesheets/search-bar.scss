@@ -33,6 +33,15 @@
     box-shadow: 0 0 2px black;
 }
 
+.search_item_container {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.add_friend_button {
+  
+}
+
 .search_item {
   width: 443px;
   height: 32px;
@@ -57,3 +66,4 @@
     justify-content: space-around;
     flex-direction: row;
 }
+

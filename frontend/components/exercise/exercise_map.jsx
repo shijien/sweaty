@@ -111,7 +111,6 @@ class ExerciseMap extends React.Component {
       if (path.getLength() === 0) {
         path.push(event.latLng);
         polyLine.setPath(path);
-        let encodeString = google.maps.geometry.encoding.encodePath(path);
         let lengthInMeters = google.maps.geometry.spherical.computeLength(path);
         this.setState({
           polyline: encodeString,
@@ -126,7 +125,7 @@ class ExerciseMap extends React.Component {
             destination: event.latLng,
             travelMode: google.maps.DirectionsTravelMode.WALKING
           },
-          function(result, status) {
+          (result, status) => {
             if (status == google.maps.DirectionsStatus.OK) {
               for (
                 let i = 0, len = result.routes[0].overview_path.length;
@@ -136,16 +135,17 @@ class ExerciseMap extends React.Component {
                 path.push(result.routes[0].overview_path[i]);
               }
             }
+            debugger
+            let encodeString = google.maps.geometry.encoding.encodePath(path);
+            let lengthInMeters = google.maps.geometry.spherical.computeLength(path);
+            this.setState({
+              polyline: encodeString,
+              distance: lengthInMeters * 0.000621371,
+              endLat: parseFloat(event.latLng.lat()),
+              endLnt: parseFloat(event.latLng.lng())
+            });
           }
         );
-        let encodeString = google.maps.geometry.encoding.encodePath(path);
-        let lengthInMeters = google.maps.geometry.spherical.computeLength(path);
-        this.setState({
-          polyline: encodeString,
-          distance: lengthInMeters * 0.000621371,
-          endLat: parseFloat(event.latLng.lat()),
-          endLnt: parseFloat(event.latLng.lng())
-        });
       }
     }
   }
@@ -185,7 +185,7 @@ class ExerciseMap extends React.Component {
       end_lnt: this.state.endLnt,
       end_lat: this.state.endLat
     });
-    this.props.history.push("/exercises/my_exercises");
+    this.props.history.push("/my_home/my_exercises");
   }
   render() {
     let distance;

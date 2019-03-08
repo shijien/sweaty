@@ -28,7 +28,7 @@ const ExerciseIndexItem = (props) => {
                 <img src={`https://maps.googleapis.com/maps/api/staticmap
 ?size=100x100&path=weight:3%7Ccolor:red%7Cenc:${props.exercise.map}&key=${window.apiKey}`} />
             </td>
-            <td className="exercise-td">{props.exercise.createdAt}</td>
+            <td className="exercise-td">{props.exercise.createdAt.slice(0, 10)}</td>
             {exerciseTypeTabComponent(props)}
             <td className="exercise-td">{props.exercise.name}</td>
             <td className="exercise-td">{props.exercise.location}</td>

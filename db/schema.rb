@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_051443) do
     t.string "name", null: false
     t.string "exercise_type", null: false
     t.string "location", null: false
-    t.integer "distance", null: false
+    t.float "distance", null: false
     t.float "start_lnt", null: false
     t.float "start_lat", null: false
     t.float "end_lnt", null: false

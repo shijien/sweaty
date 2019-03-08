@@ -7,7 +7,7 @@
 #  name          :string           not null
 #  exercise_type :string           not null
 #  location      :string           not null
-#  distance      :integer          not null
+#  distance      :float          not null
 #  start_lnt     :float            not null
 #  start_lat     :float            not null
 #  end_lnt       :float            not null

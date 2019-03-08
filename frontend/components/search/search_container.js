@@ -11,7 +11,6 @@ import {
 const mSP = (state, ownProps) => {
 
   return {
-    
     searchedUsers: Object.values(state.search),
     currentUserId: state.session.id
   };

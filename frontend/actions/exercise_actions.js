@@ -21,7 +21,7 @@ export const receiveExercise = (exercise) => {
 
 export const removeExercise = (exerciseId) => {
     return {
-        tyype: REMOVE_EXERCISE,
+        type: REMOVE_EXERCISE,
         exerciseId
     };
 };

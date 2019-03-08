@@ -73,7 +73,7 @@ class Search extends React.Component {
               this.props.createRequest({
                 request_from_id: currentUserId,
                 request_to_id: user.id
-              })
+              }).then(() => window.location.reload())
             }
           >
             Add Friends
@@ -88,7 +88,7 @@ class Search extends React.Component {
               this.props.createFriend({
                 from_user_id: currentUserId,
                 to_user_id: user.id
-              })
+              }).then(() => window.location.reload())
             }
           >
             Accept
@@ -107,7 +107,7 @@ class Search extends React.Component {
         for (let obj in this.props.searchedUsers) {
             if (this.props.searchedUsers[obj].id !== this.props.currentUserId) {
             arr.push(
-              <div>
+              <div className="search_item_container">
                 <SearchItem
                   className="search_item"
                   currentUserId={this.props.currentUserId}
@@ -117,7 +117,7 @@ class Search extends React.Component {
                   getRequest={this.props.getRequest}
                   fetchFriends={this.props.fetchFriends}
                 />
-                <div>
+                <div className="add_friend_button">
                   {this.handleAddFriendButton(
                     this.props.searchedUsers[obj],
                     this.props.currentUserId
