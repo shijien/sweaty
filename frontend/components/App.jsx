@@ -18,13 +18,16 @@ import { Route, Switch } from 'react-router-dom';
 
 const App = () => (
     <div className="App">
+    <div>
         <header>
             <Route path='/' component={GreetingContainer} />
         </header>
+        
         <AuthRoute exact path='/' component={SplashContainer} />
         <ProtectedRoute path='/friends' component={FriendsNavbar} />
         <ProtectedRoute path='/friends/find_friends' component={SearchContainer} />
         <ProtectedRoute path='/friends/my_friends' component={FriendsIndexContainer} />
+        
         <ProtectedRoute path='/my_home' component={MainNavBar} />
         <Switch>
             <ProtectedRoute path='/exercises/create' component={ExerciseMapContainer} />
@@ -34,6 +37,7 @@ const App = () => (
             <AuthRoute exact path="/login" component={LoginFormContainer} />
             <AuthRoute exact path="/signup" component={SignupFormContainer} />
         </Switch>
+        </div>
         <Route path='/' component={Footer} />
     </div>
 );

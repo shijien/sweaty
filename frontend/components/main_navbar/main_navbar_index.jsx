@@ -3,7 +3,9 @@ import {NavLink} from 'react-router-dom';
 
 const MainNavBar = () => {
     return (
+        
         <div className="main-navbar">
+        
             <NavLink to="/my_home/activity_feed" activeClassName="active">
                 <div className="main-navbar-box">
                     ACTIVITY FEED 

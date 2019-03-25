@@ -1,6 +1,10 @@
 .exercise-tag {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+}
+
+.exercise-tag a {
+    margin-right: 1075px;
 }
 .exercise-index{
   width: 100%;

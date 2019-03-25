@@ -1,11 +1,10 @@
 
 .main-navbar{
-  width: 1200px;
-  height: 40px;
-  display: flex;
-  background-color: #F0F2F4;
-  margin-top: 40px;
-  align-self: center;
+    height: 40px;
+    display: flex;
+    background-color: transparent;
+    margin-top: 40px;
+    justify-content: center;
 }
 
 .main-navbar-box{
@@ -15,6 +14,7 @@
   border-right: 1px solid #dddddd;
   border-bottom: 1px solid #dddddd;
   color: #6D717A;
+  background-color:#F0F2F4;
   font-size: 20px;
   text-align: center;
   display: flex;

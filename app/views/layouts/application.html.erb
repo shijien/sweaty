@@ -4,6 +4,9 @@
     <title>Sweaty</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <link rel="icon"
+      type="image/png"
+      href=" <%= image_url('sweaty_logo.png') %>">
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=no"/>
     <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -17,6 +20,7 @@
       window.logoUrl = "<%= image_url('sweaty_logo.png') %>"
       window.profileUrl = "<%= image_url('giraffe1.jpg') %>"
       window.searchUrl = "<%= image_url('search_icon.png') %>"
+      window.faviconUrl = "<%= image_url('sweaty_logo.png')%>"
 
       window.apiKey = "AIzaSyBiC5pcIRL2xdS6_eqy6XwjHnf2hNf6sHY"
     </script>

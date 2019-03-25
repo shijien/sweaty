@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<!-- saved from url=(0066)chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/dashboard.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>New Tab</title>
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/css/style.min.css">
+<style type="text/css" id="themeColourCustom">.dropdown, .u--bg { background-color: #333; }</style><style type="text/css" id="font-override"></style><style type="text/css">.focuses .control,.focuses .icon-wrapper{vertical-align:top}.focuses{width:100%;font-size:187.5%}.focuses::before{height:335px;width:100%;position:absolute;top:-92px;left:0;z-index:-1;opacity:0;transition:opacity .2s;background:url(../img/overlay-focus.png) 50% 0 no-repeat;background-size:contain;content:" "}.focuses .focus,.focuses .focus p{position:relative}.focuses.shadow::before{opacity:1}.focus-wrapper{display:flex;justify-content:center;min-height:93px}.focuses .focus{width:100%;display:inline-block!important;overflow:visible}.focuses .focus p,.focuses h3{padding:0;margin:0}.focuses input{font-size:120%;line-height:120%}.focuses .prompt{padding-bottom:6px}.focuses .prompt h3{font-size:2.1875rem;font-weight:300}.focuses .prompt input{width:100%;padding-top:4px;display:block;background:0;border:0;border-bottom:2px solid #fff;color:#fff;font-weight:500;outline:0;text-align:center;transition:border-color .2s ease}.focuses .delete,.focuses .icon-wrapper:after{height:30px;width:30px}.focuses .focus h3{margin:17px 0 3px;font-size:70%;line-height:120%;text-transform:uppercase}.focuses .focus-row{display:flex;align-items:baseline;justify-content:center;font-size:120%;line-height:120%}.focuses .todays-focus{max-width:87%;margin:3px 0;display:inline-block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.focuses .complete .todays-focus{text-decoration:line-through;opacity:.85}.focuses .control{display:inline-flex;opacity:0;border-radius:100px;cursor:pointer;transition:all .1s ease;transform-origin:50% 50%}.focus-wrapper:hover .control{opacity:.8}.focuses .checkbox:hover,.focuses .complete .control{opacity:1}.focuses .col-checkbox{justify-content:flex-end}.focuses .checkbox{margin-right:.15em;padding:10px;position:relative;border:none;font-size:80%;line-height:1;text-align:left;text-shadow:0 0 15px rgba(0,0,0,.3)}.focuses .focus-open{margin-left:-1.7px}.focuses .complete .focus-done,.focuses .focus-open{display:block}.focuses .focus-done{display:none}.focuses .complete .focus-done{opacity:.85}.focuses .checkbox .focus-done{position:absolute}.focuses .control .icon-wrapper .icon{opacity:.8}.focuses .icon-wrapper:hover .icon{opacity:1}.focuses .col-delete{padding-top:2px;align-self:center}.focuses .delete{margin-left:14px;align-self:center;font-size:70%}.focuses .delete .icon{height:10px;width:10px;transition:transform .1s ease}.focuses .complete .delete .icon{transform:rotate(45deg)}.focuses .focus-container{width:100%}.focuses .container-height-setter{padding-bottom:6px;display:flex;flex-direction:column;visibility:hidden}.focuses .container-height-setter h3{margin:0;font-weight:300;font-size:2.1875rem;line-height:inherit}.focuses .container-height-setter input{padding:4px 0 1px;border:none;border-bottom:2px solid #fff;font-size:120%}.focuses .focus-content{width:100%;position:absolute;top:0}.focus-message-wrapper{position:relative}.focus-message{display:none;position:absolute;top:10px;right:0;left:0;font-size:1.125rem;line-height:1}.focus-message .loading{margin-right:10px;vertical-align:-5%}.focuses.loading{display:block}.focus-message .retry{margin-left:-2px;padding:4px;cursor:pointer;text-decoration:underline;transition:var(--a-default)}.focus-message .retry:hover{opacity:.7}.focuses .loading input{border-color:rgba(255,255,255,.5);color:transparent}.focuses .cached .control{display:none}.focuses .cached .todays-focus{max-width:none}@media screen and (max-height:650px){.focuses .focus-row{font-size:110%}}@media screen and (max-height:600px){.focuses .prompt input{width:15em}}@media screen and (max-height:550px){.focuses .prompt input{width:17.2em}}</style><style type="text/css">.base-metric{--app-padding:15px;padding:0;order:1}.metric-list .metric-label{max-width:none}.base-metric .app-dash{position:relative}.base-metric .add-shadow:before{border-bottom-right-radius:20%}.top-right .base-metric:first-child .app-dash{padding-right:10px}.app-dash .metric-label{opacity:.9}.app-dash .icon-random{display:none}.base-metric .app-wrapper{position:absolute}.base-metric .nipple-top-right:after{right:28px!important}.base-metric .app{--metric-width:220px;width:var(--metric-width);right:0;transition:all var(--a--fast) ease,left 0s ease}.base-metric .subviews{width:calc(var(--metric-width) * 4);will-change:max-height;transition:all .3s ease}.base-metric .subview{width:var(--metric-width)}.base-metric .add .icon-wrapper{padding-left:12px}.base-metric .icon-wrapper i{min-width:19px;margin-top:-1px;text-align:center}.base-metric .header{height:var(--header-height)}.base-metric .body{max-height:calc(100% - var(--header-height) - var(--app-padding));padding:0 var(--app-padding) var(--app-padding);overflow:auto}.base-metric.hide-scroll .body{overflow:hidden}.base-metric .metric-list{margin-right:calc((var(--metric-width) - (100% + var(--app-padding) * 2)) * -1)}.metric-list-item{margin:0 0 3px;padding:6px 7px 4px;position:relative;display:flex;justify-content:space-between;border-radius:2px;cursor:pointer}.metric-list-item:last-child{margin-bottom:1px}.metric-list-item:hover{background:rgba(255,255,255,.07)}.metric-list-item.selected{background:rgba(255,255,255,.18)}.light .metric-list-item:hover{background:rgba(0,0,0,.03)}.light .metric-list-item.selected{background:rgba(0,0,0,.08)}.base-metric .list-item .list-control.read-only{opacity:1}.metric-archive .header{position:relative;justify-content:center}.metric-archive .controls{position:absolute;right:0}.metric-archive .back{padding-right:calc(var(--app-padding) - 3px)}.metric-archive .message{min-height:120px;margin:0;padding:var(--app-padding);display:flex;align-items:center;justify-content:center;background:0 0}.metric-archive .hidden,.metric-archive .metric-list{display:none}.metric-archive .metric-list.active{display:block}.metric-home .header{padding-left:var(--app-padding)}.metric-home .more-dropdown{width:201px}.metric-detail .edit-mode{display:none}.metric-detail .edit-mode.visible{display:flex}.metric-edit-controls .save{background:0 0;background:rgba(255,255,255,.4)}.metric-edit-controls .save.disabled{cursor:auto;opacity:.5}.base-metric .create-pinned-group{cursor:pointer}.base-metric .create-pinned-group label{display:inline-block;cursor:pointer;transition:opacity .3s ease}.base-metric .create-pinned-group:hover label{opacity:8}.base-metric .create-pinned-group .toggle-slider{transition:background .3s ease}.base-metric .create-pinned-group:hover .toggle-slider{background:rgba(255,255,255,.45)}.light .base-metric .create-pinned-group:hover .toggle-slider{background:rgba(0,0,0,.6)}.metric-dash-empty{display:none}.app-empty .metric-dash-empty{display:block}.metric-dash-empty .sets-height{visibility:hidden}.metric-dash-empty .absolute{position:absolute;top:0;right:0;bottom:0;left:0;display:flex;justify-content:flex-end;align-items:center}.metric-dash-empty .absolute svg{height:17px;width:17px;fill:#fff}.base-metric .empty{padding:0}.base-metric.app-empty .metric-home .empty{display:flex}.base-metric .loading-icon{vertical-align:-15%}.base-metric .loading-label{font-size:.875rem}</style><style type="text/css">.multiclock{order:3}.multiclock .app{padding:0}</style><style type="text/css">.search,.search .search-input{width:var(--width);position:relative}.search{--width:230px;display:inline-block;order:3}.search .search-input{height:60px;padding:20px 0 20px 36px;z-index:2;background:0 0;border:none;-moz-box-sizing:border-box;box-sizing:border-box;color:#fff;cursor:pointer;line-height:20px;outline:0}.search .icon-search,.search-underline{position:absolute;z-index:1;transition:opacity var(--a-fast) ease}.flex-column .search-input{padding-left:40px}.search-input:focus{cursor:text}.search-underline{top:49px;left:9px;right:0;border-bottom:2px solid #fff;opacity:0}.search.active .search-underline{opacity:1}.flex-column .search .search-underline{left:19px}.search .icon-search{left:10px;top:0;line-height:57px;opacity:.7}.flex-column .search .icon-search{left:20px}.search:hover .icon-search{opacity:.85}.search.active .icon-search{opacity:1}</style><style type="text/css">.weather{order:0}.weather .app-dash{padding:14px 10px 10px;cursor:pointer;order:1}.weather .location{outline:0}.weather .unit{display:block;position:absolute;left:97%;top:5px;animation:fadeout 4s ease 4s 1 normal;animation-fill-mode:forwards;font-size:55%;text-transform:uppercase}.weather .unit.hide,.weather.no-location .metric-stat .weather-degree{display:none}.weather .icon-weather{line-height:50%}.weather .metric-stat .icon-weather{margin-right:6px}.weather.no-location .metric-stat .icon-weather{margin-right:0}.weather .icon:before{font-family:MeteoconsRegular;content:attr(data-icon)}@font-face{font-family:MeteoconsRegular;src:url(../font/meteocons.woff2) format("woff2");font-weight:400;font-style:normal}.weather .app{width:420px;padding-bottom:calc(var(--app-padding) - 3px);right:7px;box-sizing:border-box}.weather.no-location .app{min-height:230px}.weather.no-location:not(.setting-location) .app{display:flex;flex-direction:column;justify-content:center;align-items:center}.weather .icon-angle-down{position:absolute;top:10px;right:8px;font-size:14px;opacity:0}.weather .active .icon-angle-down{transform:rotate(180deg)}.weather .weather-empty{padding:0;display:none}.weather.no-location:not(.setting-location) .weather-empty{display:flex;flex-direction:column;align-items:center}.weather-empty .title{margin-bottom:10px}.weather-empty .button{display:flex;justify-content:space-between;align-items:center}.weather-empty .button .weather-location-reset-icon{margin-right:6px}.weather-empty .set-manual-location{padding:10px;margin:0;cursor:pointer}.weather-empty .set-manual-location:hover{opacity:.6}.weather .weather-backround-icon{width:100%;position:relative;display:none;color:rgba(255,255,255,.1);font-family:MeteoconsRegular;font-size:110px;align-items:center;justify-content:center}.light .weather .weather-backround-icon{color:rgba(0,0,0,.1)}.weather.setting-location .weather-backround-icon{display:block}.weather .weather-backround-icon>div{padding:20px;position:absolute;top:0;right:0;left:0;text-align:center}.weather-current{padding-top:0!important}.weather-current-header{margin:0;position:relative;display:flex;justify-content:space-between}.weather.no-location:not(.setting-location) .weather-current-header{display:none}.weather-current-location{min-width:0;display:inline-block;flex:0 1 auto}.weather .weather-location{display:flex;align-items:center;transition:opacity .2s}.weather.editing .weather-location{opacity:0}.weather-location-name{min-height:24px;min-width:32px;max-width:310px;margin-right:5px;display:inline;flex:0 1 auto;align-self:baseline;cursor:pointer;font-size:118.75%;outline:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.weather-header-message{margin:0 5px;align-self:baseline;opacity:.5}.weather-current-location .loading-icon{margin-left:6px;display:none;vertical-align:0}.weather-current-location.loading .loading-icon{display:inline-block}.weather-location-icon{padding:3px;cursor:pointer;opacity:0}.weather-current-location:not(.loading) .weather-location-icon:hover{opacity:1}.weather-location-edit{font-size:13px}.weather-location-edit .icon-edit{vertical-align:5%}.weather-current-location:hover .weather-location-edit{opacity:.5}.editing .weather-location-edit{visibility:hidden}.weather .current-location-group{width:360px;position:absolute;top:-6px;left:-1px;z-index:-1;opacity:0;transition:.2s opacity}.weather.editing .current-location-group{z-index:1;opacity:1}.weather .icon-row{position:absolute;top:3px;right:-27px;display:flex;align-items:center}.weather .weather-location-reset{margin-right:7px;display:inline-block;opacity:.5}.weather .current-location-group .weather-location-reset:hover{opacity:.7}.weather .app .weather-location-reset-icon{height:15px;fill:#FFF;vertical-align:-10%}.f--quirky .weather .app .weather-location-reset-icon{vertical-align:-14%}.light .weather .app .weather-location-reset-icon{fill:#222}.weather .current-location-group .input-wrapper{position:relative}.weather .current-location{font-size:19px;padding-right:40px}.weather .clear{padding:0 5px;bottom:0;opacity:.5;cursor:pointer;font-size:1rem}.weather.editing .clear:active,.weather.editing .clear:hover{opacity:.7}.weather .clear .icon-wrapper:after{height:22px;width:22px}.weather .typeahead .location-dropdown-list{display:none;max-height:140px;overflow-x:hidden;overflow-y:auto}.weather .search-loading .typeahead .location-dropdown-list{padding:0}.weather .typeahead .location-result{margin-right:2px}.weather .searching{padding:4px 7px;display:none;font-size:87.5%;opacity:.6}.weather.search-loading .searching{display:block}.weather .searching i{animation:blink 1.4s infinite both}@keyframes blink{0%,100%{opacity:.2}20%{opacity:1}}.weather .searching i:nth-child(2){animation-delay:.2s}.weather .searching i:nth-child(3){animation-delay:.4s}.weather.search-loading .typeahead{padding:4px 0}.weather.search-loading .not-found{display:none}.weather-current-conditions{margin:-2px 0 10px;display:block;line-height:125%;opacity:.7}.weather-current-temp-row{margin-bottom:8px;display:flex;transition:filter .2s}.plus-weather .weather-current-temp-row{cursor:pointer}.weather.no-location .weather-current-temp-row{display:none}.weather-current-temp-wrapper{padding-right:22px;position:relative;flex:1 1 50%;box-sizing:border-box;white-space:nowrap}.f--startup .weather-current-temp-wrapper{padding-top:10px}.weather-current-details:hover .icon-angle-down,.weather-current-temp-wrapper:hover .icon-angle-down{opacity:.5}.weather-current-icon{margin-right:10px;font-size:58px;line-height:58px}.weather-current-temp{font-size:60px}.weather-current-temp-low{margin-left:2px;font-size:37.2px;opacity:.6}.weather-current-degree{margin-left:2px;font-size:42px;line-height:60px;opacity:1;vertical-align:top}.weather-current-details{height:70px;min-width:130px;margin:0;padding-top:4px;display:flex;flex-direction:column;justify-content:center;position:relative;flex:1 1 50%;box-sizing:border-box;font-size:13px;line-height:135%;transition:opacity .2s ease}.f--startup .weather-current-details{padding-top:25px}.weather-current-details .icon-angle-down{right:0}.weather-current-details-title{margin-right:1px;opacity:.6}.weather-current-details-value{opacity:.9}.weather-current-details-value-low{margin-left:4px;font-size:11px;line-height:100%;opacity:.6}.weather-arrow{height:10px;width:10px;margin-bottom:-1px;fill:#fff;transform:rotate(90deg)}.light .weather-arrow{fill:#222}.weather-optional{height:0;opacity:0;overflow:hidden;transition:all .2s ease}.weather-optional.active{opacity:1}.weather-row{border-top:1px solid rgba(255,255,255,.15);transition:all .2s}.weather.no-location .weather-row{display:none}.light .weather-row{border-top-color:rgba(0,0,0,.1)}.pending .weather-current-temp-row,.pending .weather-row{opacity:.2!important}.pending .weather-current-conditions{opacity:0!important}.weather-forecast{margin:0;display:flex;font-size:11px}.weather-forecast-item{flex:1 1 11.111%;text-align:center}.weather-forecast-label{margin-bottom:5px;font-size:10px;font-weight:500;opacity:.6;text-transform:uppercase}.weather-forecast-icon{margin-bottom:3px;display:block;font-size:20px;line-height:90%!important;opacity:.85;vertical-align:-20%}.weather-forecast-high{opacity:.85}.weather-forecast-hourly{padding:11px 0;display:flex}.weather-hourly .weather-forecast-item{flex-shrink:0}.weather-forecast-hourly .weather-forecast-high{font-size:11px}.weather-optional.weather-hourly.active{height:75px}.f--startup .weather-optional.weather-hourly.active{height:79px}.weather-forecast-daily{padding-top:8px!important;clear:both;opacity:0;transition:opacity .2s ease}.weather-forecast-daily.active{opacity:1}.weather-forecast-day{margin:0 1.5px;padding:4px 2px;border-radius:3px;cursor:pointer;white-space:nowrap}.weather-forecast-day:first-child{margin-left:0}.weather-forecast-day:last-child{margin-right:0}.weather-forecast-day.selected,.weather-forecast-day:hover{background:rgba(255,255,255,.09)}.light .weather-forecast-day.selected,.light .weather-forecast-day:hover{background:rgba(0,0,0,.05)}.weather-forecast-daily .weather-forecast-label{margin-bottom:4px}.weather-forecast-daily .weather-forecast-icon{margin-bottom:0;margin-right:1px;display:inline-block;font-size:17px}.weather-forecast-daily .weather-forecast-high{padding-right:0}.weather-forecast-daily .weather-forecast-low{padding-left:3px;opacity:.4}.weather-extra{padding:11px 0;display:flex;font-size:12px}.weather-optional.weather-detail.active{height:90px}.weather-extra-col{flex:1 1 50%}.weather-extra-cell{line-height:135%}.weather-extra-cell:nth-child(odd){margin-bottom:4px}.weather-arrow-pressure{height:9px;width:9px;margin-bottom:0;margin-left:-2px;padding-right:2px}.weather-detail-unavailable{padding:11px 0;display:none;font-size:13px;text-align:center}.weather-detail-unavailable.show{display:block}.weather.editing .more-toggle,.weather.no-location .more{display:none}.weather-detail-unavailable>span{opacity:.5}.weather .more{position:static;margin:calc(-1 * var(--app-padding)) calc(-1 * var(--app-padding)) 0 0;padding:var(--app-padding);cursor:pointer}.weather .more-toggle{padding-top:2px}.weather .more .more-toggle:after{height:22px;width:22px}.weather .more:hover .more-toggle:after{background:rgba(255,255,255,.12)}.weather .more i:before{width:auto}.weather .more:hover i{opacity:.8}.weather .more-dropdown{top:31px;right:0}.weather .weather-attribution{padding-top:4px;padding-bottom:2px;cursor:default;font-size:10px;opacity:.5}.weather .weather-attribution:hover{background:0 0!important}.weather-attribution-logo{height:10px}.light .weather-attribution-logo{filter:brightness(13%)}</style></head>
+<body class="f--default Chrome">
+<div class="overlay loading-overlay">
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" class="loading-logo" style="display: none;" fill="#ccc">
+<path d="M500.024 1000.08C223.851 1000.08-.032 776.2-.032 500.024S223.851-.032 500.024-.032s500.056 223.883 500.056 500.056S776.2 1000.08 500.024 1000.08zm250.33-523.321a228.485 228.485 0 0 0-5.749-51.018 136.773 136.773 0 0 0-19.042-45.27 98.029 98.029 0 0 0-35.928-32.336Q667 335.925 633.946 335.92q-43.839 0-78.324 26.228t-48.863 75.09h-1.437a172.1 172.1 0 0 0-11.5-39.881 108.707 108.707 0 0 0-20.839-31.976 92.149 92.149 0 0 0-31.976-21.557q-19.048-7.9-44.911-7.9a120.578 120.578 0 0 0-74.372 25.509 147.849 147.849 0 0 0-29.1 30.539 141.892 141.892 0 0 0-20.12 40.959h-1.437q0-9.332-.359-21.2t-.718-24.431q-.37-12.562-.718-23.353-.371-10.779-1.078-17.964h-15.809q.708 7.191 1.438 17.964.707 10.779 1.077 22.635.354 11.856.719 23.353t.359 19.4v247.187h15.809V511.251q0-38.079 9.7-67.9 9.7-29.809 26.588-50.659A117.245 117.245 0 0 1 347.6 360.71a108.444 108.444 0 0 1 48.5-11.137q29.455 0 48.5 12.575a92.92 92.92 0 0 1 29.82 31.257 125.19 125.19 0 0 1 14.731 41.677 256.2 256.2 0 0 1 3.952 43.114v198.326h15.809V511.251q0-38.079 10.06-67.9 10.054-29.809 26.946-50.659a117.245 117.245 0 0 1 39.521-31.977 108.445 108.445 0 0 1 48.5-11.137q29.455 0 48.863 12.575a98.748 98.748 0 0 1 30.9 31.257 127.515 127.515 0 0 1 16.168 41.677 217.585 217.585 0 0 1 4.67 43.114v198.321h15.809V476.759z"></path>
+</svg>
+</div>
+<div id="main-view" style="display: block;">
+<div class="bookmarks-bar bookmarks-placeholder" style="height: 31px; position: fixed; top: 0; left: 0; right: 0; display: none; background-color: #fff;"></div>
+<ul id="background" class="background"><li class="fadein" style="background-image: url(&quot;https://images.unsplash.com/photo-1506901496779-f1d1e93c7825?ixlib=rb-0.3.5&amp;q=99&amp;fm=jpg&amp;crop=entropy&amp;cs=tinysrgb&amp;w=2048&amp;fit=max&amp;s=e55563d88958340c6f23a7be561685de&quot;);"></li></ul>
+<div class="background-overlay show"></div>
+<div class="apps show-apps">
+<div class="full"></div>
+<div class="top-bar"></div>
+<div class="top-row">
+<div class="top-left search-visible"><div id="quicklinks" class="app-container quicklinks links" style=""><span class="app-dash toggle Links-toggle" data-test="links-app-dash">Links</span><div class="app-wrapper app-placeholder nipple-top-left">
+	<div class="app links-app" style="height:70px; width:260px">
+		<div class="app-placeholder-loading">
+			<i class="loading-icon"></i>Loading...
+		</div>
+	</div>
+</div>
+
+</div><div id="dashlinks" class="app-container links dashlinks"><span class="app-dash optional-link toggle toggle-icon toggle-chrome-tab" data-momo-id="chromeTab" data-place="dash" data-url="chrome-search://local-ntp/local-ntp.html" title="Chrome Tab"><svg class="icon-svg icon-chrome-tab" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 497.401 497.401"><g><path d="M478.742 154.382H320.714c28.366 21.765 47.111 55.717 47.111 94.307 0 30.63-14.345 56.386-30.933 79.445-28.322 39.41-95.817 168.878-95.817 168.878 2.567.043 5.026.388 7.636.388 137.341 0 248.69-111.348 248.69-248.69-.022-33.412-6.709-65.229-18.659-94.328z"></path><path d="M248.172 129.619c54.402-.388 217.628-2.049 217.628-2.049C423.24 51.511 342.069 0 248.69 0 170.819 0 101.361 35.829 55.782 91.848l75.972 134.925c10.268-55.113 58.349-96.744 116.418-97.154z"></path><path d="M248.668 367.825c-51.964 0-91.568-35.117-111.974-79.855-20.535-45.018-98.061-171.984-98.061-171.984C14.301 154.425 0 199.832 0 248.69c0 124.744 91.935 227.744 211.696 245.648l77.288-134.019c-12.641 4.615-26.101 7.506-40.316 7.506z"></path><circle cx="248.668" cy="248.711" r="80.416"></circle></g></svg></span><!--
+--><span class="app-dash optional-link toggle toggle-icon toggle-apps" data-momo-id="apps" data-place="dash" data-url="chrome://apps" title="Apps"><svg class="icon-svg icon-apps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M3 3h6v6H3V3zm10 0h6v6h-6V3zm10 0h6v6h-6V3zM3 13h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6zM3 23h6v6H3v-6zm10 0h6v6h-6v-6zm10 0h6v6h-6v-6z"></path></svg></span>
+</div><div id="search" class="app-container search"><form class="search-form"><span class="search-underline"></span><i class="icon-search"></i><input type="text" id="search-input" class="search-input" autocomplete="off"></form></div></div>
+<div class="top-right"><div id="weather" class="app-container weather"><!-- Metric -->
+<div class="app-dash" title="Cloudy">
+	<div class="metric-stat">
+			<span class="icon icon-weather" data-icon="Y" title="Cloudy"></span><span class="metric-stat-number">51</span><span class="weather-degree">°</span><span class="unit hide">f</span>
+	</div>
+	<span class="location metric-label data" title="">San Jose</span>
+	<span class="metric-message"></span>
+</div>
+
+<div class="app-wrapper nipple-top-right">
+	<div class="app weather-app plus-weather">
+
+		<!-- Main weather area -->
+		<section class="weather-current">
+
+			<!-- Header -->
+			<header class="weather-current-header">
+
+				<div class="weather-current-location">
+					<div class="weather-location">
+						<span class="weather-location-name" title="">San Jose</span>
+						<i class="loading-icon"></i>
+						<span class="weather-location-icon weather-location-edit"><i class="icon-edit"></i></span>
+					</div>
+					<div class="input-group current-location-group">
+						<div class="input-wrapper">
+							<input type="text" name="current-location" id="current-location" class="current-location" autocomplete="off" placeholder="Location" value="San Jose" spellcheck="false" data-test="weather-location-search">
+							<span class="icon-row">
+								<span class="weather-location-icon weather-location-reset" title="Use your current location">
+									<svg class="weather-location-reset-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 937.4 937.4"><path d="M887.4,418.7H855.6A390,390,0,0,0,518.7,81.8V50a50,50,0,0,0-100,0V81.8A390,390,0,0,0,81.8,418.7H50a50,50,0,0,0,0,100H81.8A390,390,0,0,0,418.7,855.6v31.8a50,50,0,0,0,100,0V855.6A390,390,0,0,0,855.6,518.7h31.8a50,50,0,0,0,0-100ZM730,518.7h24.4A290.53,290.53,0,0,1,518.6,754.5V730.1a50,50,0,0,0-100,0v24.4A290.53,290.53,0,0,1,182.8,518.7h24.4a50,50,0,0,0,0-100H182.8A290.53,290.53,0,0,1,418.6,182.9v24.4a50,50,0,1,0,100,0V182.9A290.53,290.53,0,0,1,754.4,418.7H730a50,50,0,1,0,0,100Z"></path></svg>
+								</span>
+								<i class="u--flex-center clear">
+									<span class="icon-wrapper">
+										<svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.982 212.982"><path d="M131.804 106.491l75.936-75.936c6.99-6.99 6.99-18.323 0-25.312-6.99-6.99-18.322-6.99-25.312 0L106.491 81.18 30.554 5.242c-6.99-6.99-18.322-6.99-25.312 0-6.989 6.99-6.989 18.323 0 25.312l75.937 75.936-75.937 75.937c-6.989 6.99-6.989 18.323 0 25.312 6.99 6.99 18.322 6.99 25.312 0l75.937-75.937 75.937 75.937c6.989 6.99 18.322 6.99 25.312 0 6.99-6.99 6.99-18.322 0-25.312l-75.936-75.936z"></path></svg>
+									</span>
+								</i>
+							</span>
+						</div>
+
+						<div class="dropdown typeahead">
+							<div class="searching">Searching<i>.</i><i>.</i><i>.</i></div>
+							<ul class="dropdown-list location-dropdown-list" data-test="weather-location-results"></ul>
+							<div class="not-found">No locations found.</div>
+						</div>
+					</div>
+
+					<span class="weather-current-conditions">Cloudy</span>
+				</div>
+
+				<div class="more">
+					<div class="icon-wrapper more-toggle">
+						<i class="icon-ellipsis more-icon"></i>
+					</div>
+					<div class="dropdown more-dropdown">
+						<ul class="dropdown-list">
+							<li class="toggle-hourly">
+								Hourly forecast
+								<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+							</li>
+							<li class="toggle-details">
+								Extra weather info
+								<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+							</li>
+							<li class="line"></li>
+							<li class="toggle-metric">
+								Metric units
+								<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+							</li>
+							<li class="weather-location-edit-menu">Edit location</li>
+								<li class="weather-attribution no-hover">
+									<img class="weather-attribution-logo" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/logo-accuweather.png">
+								</li>
+						</ul>
+					</div>
+				</div>
+			</header>
+
+
+			<div class="weather-current-temp-row">
+				<!-- Main temp -->
+				<div class="weather-current-temp-wrapper toggle-hourly">
+					<i class="icon-angle-down"></i>
+					<span class="icon icon-weather weather-current-icon" data-icon="Y" title="Cloudy"></span><span class="weather-current-temp">51°</span>
+				</div>
+
+				<!-- Main details -->
+				<div class="weather-current-details toggle-details">
+					<i class="icon-angle-down"></i>
+					<div title="2 hours of sun">
+						<span class="weather-current-details-title">Feels like</span>
+						<span class="weather-current-details-value">
+							45°
+						</span>
+					</div>
+						<div title="0.16 in rain expected">
+							<span class="weather-current-details-title">Chance of rain</span>
+							<span class="weather-current-details-value">64%</span>
+						</div>
+						<div title="Gust 13 mph">
+							<span class="weather-current-details-title">Wind</span>
+							<span class="weather-current-details-value">13 mph <svg class="weather-arrow" style="transform: rotate(338deg)" xmlns="http://www.w3.org/2000/svg" width="73.168" height="73.168" viewBox="0 0 73.168 73.168"><path d="M58.079 22.316L40.682 1.633A4.581 4.581 0 0 0 37.249 0c-1.392.075-2.599.534-3.485 1.52L15.185 22.204a4.584 4.584 0 0 0 .35 6.468 4.583 4.583 0 0 0 6.472-.354l10.109-11.253v51.531a4.578 4.578 0 0 0 4.584 4.572 4.577 4.577 0 0 0 4.581-4.572v-52.02l9.785 11.63a4.554 4.554 0 0 0 3.509 1.632 4.591 4.591 0 0 0 2.945-1.068 4.58 4.58 0 0 0 .559-6.454z"></path></svg></span>
+						</div>
+				</div>
+			</div>
+
+
+			<!-- Extra weather info -->
+			<div class="weather-row weather-optional weather-hourly active">
+				<div class="weather-forecast weather-forecast-hourly">
+					<div class="weather-forecast-item" title="Mostly cloudy (47% chance of rain, 14 mph wind)">
+						<div class="weather-forecast-label">13</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="H"></span>
+						<span class="weather-forecast-high">52°</span>
+					</div>
+					<div class="weather-forecast-item" title="Rain (51% chance of rain, 13 mph wind)">
+						<div class="weather-forecast-label">14</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="R"></span>
+						<span class="weather-forecast-high">52°</span>
+					</div>
+					<div class="weather-forecast-item" title="Mostly cloudy (47% chance of rain, 12 mph wind)">
+						<div class="weather-forecast-label">15</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="H"></span>
+						<span class="weather-forecast-high">54°</span>
+					</div>
+					<div class="weather-forecast-item" title="Cloudy (47% chance of rain, 12 mph wind)">
+						<div class="weather-forecast-label">16</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Y"></span>
+						<span class="weather-forecast-high">52°</span>
+					</div>
+					<div class="weather-forecast-item" title="Rain (51% chance of rain, 13 mph wind)">
+						<div class="weather-forecast-label">17</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="R"></span>
+						<span class="weather-forecast-high">51°</span>
+					</div>
+					<div class="weather-forecast-item" title="Cloudy (47% chance of rain, 9 mph wind)">
+						<div class="weather-forecast-label">18</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Y"></span>
+						<span class="weather-forecast-high">50°</span>
+					</div>
+					<div class="weather-forecast-item" title="Cloudy (43% chance of rain, 9 mph wind)">
+						<div class="weather-forecast-label">19</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Y"></span>
+						<span class="weather-forecast-high">49°</span>
+					</div>
+					<div class="weather-forecast-item" title="Mostly cloudy (47% chance of rain, 7 mph wind)">
+						<div class="weather-forecast-label">20</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="I"></span>
+						<span class="weather-forecast-high">48°</span>
+					</div>
+					<div class="weather-forecast-item" title="Showers (51% chance of rain, 6 mph wind)">
+						<div class="weather-forecast-label">21</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Q"></span>
+						<span class="weather-forecast-high">48°</span>
+					</div>
+					<div class="weather-forecast-item" title="Cloudy (43% chance of rain, 7 mph wind)">
+						<div class="weather-forecast-label">22</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Y"></span>
+						<span class="weather-forecast-high">48°</span>
+					</div>
+					<div class="weather-forecast-item" title="Showers (51% chance of rain, 7 mph wind)">
+						<div class="weather-forecast-label">23</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Q"></span>
+						<span class="weather-forecast-high">47°</span>
+					</div>
+					<div class="weather-forecast-item" title="Cloudy (43% chance of rain, 7 mph wind)">
+						<div class="weather-forecast-label">00</div>
+						<span class="icon icon-weather weather-forecast-icon" data-icon="Y"></span>
+						<span class="weather-forecast-high">46°</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="weather-row weather-optional weather-detail active">
+				<div class="weather-extra">
+					<div class="weather-extra-col">
+						<div class="weather-extra-cell" title="Moon Waxing Crescent">
+							<div>
+								<span class="weather-current-details-title">Sunrise</span> <span class="weather-current-details-value">06:28</span>
+							</div>
+							<div>
+								<span class="weather-current-details-title">Sunset</span> <span class="weather-current-details-value">18:09</span>
+							</div>
+						</div>
+
+						<div class="weather-extra-cell">
+							<div>
+								<span class="weather-current-details-title">Dewpoint</span> <span class="weather-current-details-value">43°</span>
+							</div>
+							<div class="pressure-text">
+								<span class="weather-current-details-title">Pressure</span> <span class="weather-current-details-value" title="Steady">29.96 inHg</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="weather-extra-col">
+						<div class="weather-extra-cell">
+							<div>
+								<span class="weather-current-details-title">Humidity</span> <span class="weather-current-details-value">73%</span>
+							</div>
+							<div title="In the past 24 hours">
+								<span class="weather-current-details-title">Precipitation</span> <span class="weather-current-details-value">0.01 in</span>
+							</div>
+						</div>
+
+						<div class="weather-extra-cell">
+							<div title="Low">
+								<span class="weather-current-details-title">UV Index</span> <span class="weather-current-details-value">1</span>
+							</div>
+							<div title="R-">
+								<span class="weather-current-details-title">Visibility</span> <span class="weather-current-details-value">10 mi</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="weather-row weather-detail-unavailable ">
+				<span>Extra info unavailable on extended forecast.</span>
+			</div>
+		</section>
+
+
+
+		<!-- 5-day advance forecast -->
+		<section class="weather-row weather-forecast weather-forecast-daily active">
+			<div class="weather-forecast-item weather-forecast-day" data-day="Saturday" title="Rain and drizzle; cool">
+				<div class="weather-forecast-label">Sat</div>
+				<span class="icon icon-weather weather-forecast-icon" data-icon="R"></span>
+				<span class="weather-forecast-high">54°</span><span class="weather-forecast-low">43°</span>
+			</div>
+			<div class="weather-forecast-item weather-forecast-day" data-day="Sunday" title="Some sun, a shower; cool">
+				<div class="weather-forecast-label">Sun</div>
+				<span class="icon icon-weather weather-forecast-icon" data-icon="Q"></span>
+				<span class="weather-forecast-high">58°</span><span class="weather-forecast-low">40°</span>
+			</div>
+			<div class="weather-forecast-item weather-forecast-day" data-day="Monday" title="Mostly sunny">
+				<div class="weather-forecast-label">Mon</div>
+				<span class="icon icon-weather weather-forecast-icon" data-icon="B"></span>
+				<span class="weather-forecast-high">63°</span><span class="weather-forecast-low">42°</span>
+			</div>
+			<div class="weather-forecast-item weather-forecast-day" data-day="Tuesday" title="A couple of morning showers">
+				<div class="weather-forecast-label">Tue</div>
+				<span class="icon icon-weather weather-forecast-icon" data-icon="Q"></span>
+				<span class="weather-forecast-high">58°</span><span class="weather-forecast-low">42°</span>
+			</div>
+			<div class="weather-forecast-item weather-forecast-day" data-day="Wednesday" title="Mostly sunny">
+				<div class="weather-forecast-label">Wed</div>
+				<span class="icon icon-weather weather-forecast-icon" data-icon="B"></span>
+				<span class="weather-forecast-high">62°</span><span class="weather-forecast-low">40°</span>
+			</div>
+		</section>
+
+		<div class="weather-empty empty">
+			<div class="title">No location set</div>
+			<button class="button find-location">
+				<svg class="weather-location-reset-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 937.4 937.4"><path d="M887.4,418.7H855.6A390,390,0,0,0,518.7,81.8V50a50,50,0,0,0-100,0V81.8A390,390,0,0,0,81.8,418.7H50a50,50,0,0,0,0,100H81.8A390,390,0,0,0,418.7,855.6v31.8a50,50,0,0,0,100,0V855.6A390,390,0,0,0,855.6,518.7h31.8a50,50,0,0,0,0-100ZM730,518.7h24.4A290.53,290.53,0,0,1,518.6,754.5V730.1a50,50,0,0,0-100,0v24.4A290.53,290.53,0,0,1,182.8,518.7h24.4a50,50,0,0,0,0-100H182.8A290.53,290.53,0,0,1,418.6,182.9v24.4a50,50,0,1,0,100,0V182.9A290.53,290.53,0,0,1,754.4,418.7H730a50,50,0,1,0,0,100Z"></path></svg>
+				<span>Find My Location</span>
+			</button>
+			<div class="description set-manual-location">Enter location manually</div>
+		</div>
+		<div class="weather-backround-icon">
+			<div>H</div>
+		</div>
+
+
+	</div>
+</div>
+</div><div id="countdown" class="app-container base-metric metric countdown app-empty" data-test="countdown"><div class="app-dash metric-dash metric-dash-empty add-shadow" title="Add a countdown">
+	<div class="metric-item" data-test="metric-dash-empty">
+		<div class="metric-stat">
+			<span class="sets-height">+</span>
+			<span class="absolute">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.33 533.33"><path d="M516.67,200H333.33V16.67A16.66,16.66,0,0,0,316.67,0h-100A16.67,16.67,0,0,0,200,16.67V200H16.67A16.67,16.67,0,0,0,0,216.67v100a16.66,16.66,0,0,0,16.67,16.66H200V516.67a16.66,16.66,0,0,0,16.67,16.66h100a16.66,16.66,0,0,0,16.66-16.66V333.33H516.67a16.66,16.66,0,0,0,16.66-16.66v-100A16.66,16.66,0,0,0,516.67,200Z"></path></svg>
+			</span>
+		</div>
+		<div class="metric-label">Countdown</div>
+	</div>
+</div>
+
+<div class="app-dash metric-dash has-multiple add-shadow" data-test="metric-dash">
+</div>
+
+<div class="app-wrapper">
+	<div class="app app-metric nipple-top-right">
+		<div class="subviews-wrapper">
+			<div class="subviews"><!--
+			--><div class="subview metric-archive" data-test="metric-archive-panel" style="height: 0px;">
+				<header class="header">
+					<span class="title">Archive</span>
+					<div class="controls">
+						<span class="control icon-wrapper back"><i class="icon icon-right"></i></span>
+					</div>
+				</header>
+				<div class="body">
+					<div class="message hidden">
+						<span class="loading hidden"><span class="loading-placeholder"></span><span class="loading-label">Loading...</span></span>
+						<span class="error hidden">Trouble connecting… <span class="action retry">Retry</span></span>
+					</div>
+					<ul class="metric-list">
+							<li class="empty">
+								<div class="title">No countdowns archived</div>
+							</li>
+					</ul>
+
+				</div>
+				</div><!--
+				--><div class="subview list-view metric-home" data-test="metric-list-panel" style="height: 0px;">
+					<header class="header">
+						<span class="title">Countdowns</span>
+						<div class="controls">
+							<div class="control add" data-test="metric-add">
+								<div class="icon-wrapper">
+									<i class="icon-plus"></i>
+								</div>
+							</div>
+
+							<div class="control more">
+								<div class="icon-wrapper more-toggle" data-test="metric-menu">
+									<i class="icon-ellipsis more-icon"></i>
+								</div>
+								<div class="dropdown more-dropdown">
+									<ul class="dropdown-list">
+										<li class="show-archived" data-test="metric-show-archive">
+											Go to Archive
+										</li>
+										<li class="toggle-random" title="Show a random chosen countdown each load">
+											<span class="setting-title">Show Random</span>
+											<span class="toggle-slider on"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="body">
+						<div class="empty">
+							<div class="title">No countdowns yet</div>
+							<div class="description">Count down the days until an important date</div>
+							<div class="button add">New Countdown</div>
+						</div>
+						<ul class="metric-list">
+
+						</ul>
+					</div>
+
+				</div><!--
+				--><div class="subview metric-detail metric-detail-add" data-test="metric-edit-panel" style="height: 0px;">
+					<header class="header">
+						<div class="control">
+							<div class="icon-wrapper back">
+								<i class="icon icon-left"></i>
+							</div>
+						</div>
+
+						<div class="edit-mode controls">
+							<div class="control more" data-test="metric-more">
+								<div class="icon-wrapper more-toggle">
+									<i class="icon-ellipsis more-icon"></i>
+								</div>
+
+								<div class="dropdown more-dropdown">
+									<ul class="dropdown-list">
+										<li class="archive" data-test="metric-archive">Archive</li>
+										<li class="delete">Delete</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="body"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div><div id="metric" class="generic-stats metric app-container app-dash add-shadow"><div class="view">
+	<div class="primary">
+		<div class="metric-stat">
+			<span class="metric-stat-number"></span><span class="metric-stat-unit"></span>
+		</div>
+		<span class="metric-label"></span>
+	</div>
+	<span class="metric-message"></span>
+</div></div><div id="multiclock" class="app-container base-metric metric multiclock clock" data-test="clock"><div class="app-dash metric-dash metric-dash-empty add-shadow" title="Add a clock">
+	<div class="metric-item" data-test="metric-dash-empty">
+		<div class="metric-stat">
+			<span class="sets-height">+</span>
+			<span class="absolute">
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 533.33 533.33"><path d="M516.67,200H333.33V16.67A16.66,16.66,0,0,0,316.67,0h-100A16.67,16.67,0,0,0,200,16.67V200H16.67A16.67,16.67,0,0,0,0,216.67v100a16.66,16.66,0,0,0,16.67,16.66H200V516.67a16.66,16.66,0,0,0,16.67,16.66h100a16.66,16.66,0,0,0,16.66-16.66V333.33H516.67a16.66,16.66,0,0,0,16.66-16.66v-100A16.66,16.66,0,0,0,516.67,200Z"></path></svg>
+			</span>
+		</div>
+		<div class="metric-label">Clock</div>
+	</div>
+</div>
+
+<div class="app-dash metric-dash has-multiple add-shadow" data-test="metric-dash">
+<div class="metric-item pinned-metric"><div class="metric-data" title="Today, +0 hrs" data-test="metric-instance">
+	<div class="metric-stat-row">
+		<div class="metric-stat">
+			<span class="metric-stat-number">12:46</span><span class="metric-stat-unit"></span>
+		</div>
+
+		<div class="list-controls">
+				<span class="list-control list-edit" data-test="metric-edit">
+					<svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"></path></svg>
+				</span>
+					<span class="list-control list-pin active ">
+						<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.71 481.72"><path d="M106.12,10.76,10.77,106.13a36.72,36.72,0,0,0,45.92,56.8l109.6,127.41a100.11,100.11,0,0,0,20,113.32,35.27,35.27,0,0,0,49.86,0l57.33-57.31L481.71,481.72,346.35,293.52l57.31-57.31a35.3,35.3,0,0,0,0-49.88,100.16,100.16,0,0,0-113.29-20L162.93,56.67a36.72,36.72,0,0,0-56.81-45.91Z" transform="translate(0 0)"></path></svg>
+					</span>
+		</div>
+	</div>
+	<span class="metric-label" data-test="metric-label">San Jose</span>
+</div>
+</div><div class="metric-item pinned-metric"><div class="metric-data" title="Tomorrow, +16 hrs" data-test="metric-instance">
+	<div class="metric-stat-row">
+		<div class="metric-stat">
+			<span class="metric-stat-number">04:46</span><span class="metric-stat-unit"></span>
+		</div>
+
+		<div class="list-controls">
+				<span class="list-control list-edit" data-test="metric-edit">
+					<svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"></path></svg>
+				</span>
+					<span class="list-control list-pin active ">
+						<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.71 481.72"><path d="M106.12,10.76,10.77,106.13a36.72,36.72,0,0,0,45.92,56.8l109.6,127.41a100.11,100.11,0,0,0,20,113.32,35.27,35.27,0,0,0,49.86,0l57.33-57.31L481.71,481.72,346.35,293.52l57.31-57.31a35.3,35.3,0,0,0,0-49.88,100.16,100.16,0,0,0-113.29-20L162.93,56.67a36.72,36.72,0,0,0-56.81-45.91Z" transform="translate(0 0)"></path></svg>
+					</span>
+		</div>
+	</div>
+	<span class="metric-label" data-test="metric-label">Guangzhou</span>
+</div>
+</div></div>
+
+<div class="app-wrapper">
+	<div class="app app-metric nipple-top-right">
+		<div class="subviews-wrapper">
+			<div class="subviews"><!--
+			--><div class="subview metric-archive" data-test="metric-archive-panel" style="height: 0px;">
+				<header class="header">
+					<span class="title">Archive</span>
+					<div class="controls">
+						<span class="control icon-wrapper back"><i class="icon icon-right"></i></span>
+					</div>
+				</header>
+				<div class="body">
+					<div class="message hidden">
+						<span class="loading hidden"><span class="loading-placeholder"></span><span class="loading-label">Loading...</span></span>
+						<span class="error hidden">Trouble connecting… <span class="action retry">Retry</span></span>
+					</div>
+					<ul class="metric-list">
+							<li class="empty">
+								<div class="title">No clocks archived</div>
+							</li>
+					</ul>
+
+				</div>
+				</div><!--
+				--><div class="subview list-view metric-home" data-test="metric-list-panel" style="height: 0px;">
+					<header class="header">
+						<span class="title">Clocks</span>
+						<div class="controls">
+							<div class="control add" data-test="metric-add">
+								<div class="icon-wrapper">
+									<i class="icon-plus"></i>
+								</div>
+							</div>
+
+							<div class="control more">
+								<div class="icon-wrapper more-toggle" data-test="metric-menu">
+									<i class="icon-ellipsis more-icon"></i>
+								</div>
+								<div class="dropdown more-dropdown">
+									<ul class="dropdown-list">
+										<li class="show-archived" data-test="metric-show-archive">
+											Go to Archive
+										</li>
+										<li class="toggle-random" title="Show a random chosen clock each load">
+											<span class="setting-title">Show Random</span>
+											<span class="toggle-slider"><svg class="toggle-switch" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"></circle></svg></span>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="body">
+						<div class="empty">
+							<div class="title">No clocks yet</div>
+							<div class="description">Keep track of time anywhere on Earth</div>
+							<div class="button add">New Clock</div>
+						</div>
+						<ul class="metric-list">
+
+						<li class="list-item metric-list-item metric-option pinned-metric"><div class="metric-data" title="Today, +0 hrs" data-test="metric-instance">
+	<div class="metric-stat-row">
+		<div class="metric-stat">
+			<span class="metric-stat-number">12:46</span><span class="metric-stat-unit"></span>
+		</div>
+
+		<div class="list-controls">
+				<span class="list-control list-edit" data-test="metric-edit">
+					<svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"></path></svg>
+				</span>
+					<span class="list-control list-pin active ">
+						<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.71 481.72"><path d="M106.12,10.76,10.77,106.13a36.72,36.72,0,0,0,45.92,56.8l109.6,127.41a100.11,100.11,0,0,0,20,113.32,35.27,35.27,0,0,0,49.86,0l57.33-57.31L481.71,481.72,346.35,293.52l57.31-57.31a35.3,35.3,0,0,0,0-49.88,100.16,100.16,0,0,0-113.29-20L162.93,56.67a36.72,36.72,0,0,0-56.81-45.91Z" transform="translate(0 0)"></path></svg>
+					</span>
+		</div>
+	</div>
+	<span class="metric-label" data-test="metric-label">San Jose</span>
+</div>
+</li><li class="list-item metric-list-item metric-option pinned-metric"><div class="metric-data" title="Tomorrow, +16 hrs" data-test="metric-instance">
+	<div class="metric-stat-row">
+		<div class="metric-stat">
+			<span class="metric-stat-number">04:46</span><span class="metric-stat-unit"></span>
+		</div>
+
+		<div class="list-controls">
+				<span class="list-control list-edit" data-test="metric-edit">
+					<svg class="icon icon-gear" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z"></path></svg>
+				</span>
+					<span class="list-control list-pin active ">
+						<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.71 481.72"><path d="M106.12,10.76,10.77,106.13a36.72,36.72,0,0,0,45.92,56.8l109.6,127.41a100.11,100.11,0,0,0,20,113.32,35.27,35.27,0,0,0,49.86,0l57.33-57.31L481.71,481.72,346.35,293.52l57.31-57.31a35.3,35.3,0,0,0,0-49.88,100.16,100.16,0,0,0-113.29-20L162.93,56.67a36.72,36.72,0,0,0-56.81-45.91Z" transform="translate(0 0)"></path></svg>
+					</span>
+		</div>
+	</div>
+	<span class="metric-label" data-test="metric-label">Guangzhou</span>
+</div>
+</li></ul>
+					</div>
+
+				</div><!--
+				--><div class="subview metric-detail metric-detail-add" data-test="metric-edit-panel" style="height: 0px;">
+					<header class="header">
+						<div class="control">
+							<div class="icon-wrapper back">
+								<i class="icon icon-left"></i>
+							</div>
+						</div>
+
+						<div class="edit-mode controls">
+							<div class="control more" data-test="metric-more">
+								<div class="icon-wrapper more-toggle">
+									<i class="icon-ellipsis more-icon"></i>
+								</div>
+
+								<div class="dropdown more-dropdown">
+									<ul class="dropdown-list">
+										<li class="archive" data-test="metric-archive">Archive</li>
+										<li class="delete">Delete</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</header>
+					<div class="body"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div></div>
+</div>
+<div class="center"><div class="app-container clock" style=""><div class="default-clock"><div class="time">12:46</div>
+<span class="format">PM</span>
+</div></div><div id="greeting" class="app-container has-dash-icon has-centered-3-col greeting transition" style=""><span class="side-col"></span>
+
+<span class="center-col content">
+	<span class="message">Stay hungry; stay foolish.</span><!--
+	--><span class="name-wrapper"><!--
+		--><span class="name" data-test="greeting-name" spellcheck="false"></span><!--
+		--><span class="punctuation"></span>
+	</span>
+</span>
+
+<span class="side-col">
+	<span class="more more-dash">
+		<div class="icon-wrapper dash-icon more-toggle">
+			<i class="icon-ellipsis more-icon"></i>
+		</div>
+		<div class="app dropdown more-dropdown dash-dropdown nipple-top-left">
+			<ul class="dropdown-list">
+					<li class="mantra-fav toggleable">
+						<span class="icon-container">
+							<svg class="icon icon-heart" viewBox="0 0 953 1000"><path d="M1 329q7-115 79-191h2l2-2q88-76 199-76t191 70q32-28 67-45l2-2h2q56-23 117-23 88-2 161 43t110 124v2l2 4q30 106 10 202t-80 175q-62 88-162 172 0 2-2 2-49 45-107 90-34 25-59 41-33 23-55 23l-6 2-5-2q-28-3-59-29-10-6-21-16t-16-13h-2Q125 692 43 540v-2Q-6 444 1 329zm85 1"></path></svg>
+						</span>
+
+						<span class="item-label">Favorite</span>
+					</li>
+					<li class="mantra-pin toggleable">
+						<span class="icon-container">
+							<svg class="icon icon-pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 481.71 481.72"><path d="M106.12,10.76,10.77,106.13a36.72,36.72,0,0,0,45.92,56.8l109.6,127.41a100.11,100.11,0,0,0,20,113.32,35.27,35.27,0,0,0,49.86,0l57.33-57.31L481.71,481.72,346.35,293.52l57.31-57.31a35.3,35.3,0,0,0,0-49.88,100.16,100.16,0,0,0-113.29-20L162.93,56.67a36.72,36.72,0,0,0-56.81-45.91Z" transform="translate(0 0)"></path></svg>
+						</span>
+						<span class="item-label pin">Pin</span>
+						<span class="item-label unpin">Unpin</span>
+					</li>
+					<li class="mantra-skip">
+						<span class="icon-container">
+							<svg class="icon icon-skip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 259.04 137.93"><circle cx="118" cy="109.43" r="28"></circle><path d="M291.5,276A27.5,27.5,0,1,1,264,303.5,27.54,27.54,0,0,1,291.5,276m0-1A28.5,28.5,0,1,0,320,303.5,28.5,28.5,0,0,0,291.5,275Z" transform="translate(-173.5 -194.07)"></path><path class="arrow" d="M403.51,262.47a126.14,126.14,0,0,0-120.77-68.05,112.78,112.78,0,0,0-72.33,33.34c-21,21.52-33.78,52-36.86,88.09a13.5,13.5,0,0,0,12.3,14.6c.39,0,.78.05,1.17.05a13.5,13.5,0,0,0,13.43-12.35c2.54-29.8,12.67-54.53,29.27-71.52,14.59-14.93,33.63-23.67,55.06-25.29a98,98,0,0,1,63.57,17.78,99,99,0,0,1,29.55,32.82l-28.39,10.51L417,327l15.54-75.28Z" transform="translate(-173.5 -194.07)"></path></svg>
+						</span>
+						<span class="item-label">Skip</span>
+					</li>
+					<li class="mantra-remove">
+						<span class="icon-container">
+							<svg class="icon icon-remove" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 241.66 241.66"><path d="M210.323 17.93h-17.898c-9.01 0-16.066-5.165-26.848-8.949C150.811 3.865 128.756.025 90.766.025 84.122.025 63.516 0 63.516 0c-6.309 0-11.377 2.882-15.035 6.363-1.392 1.323-2.844 3.245-3.465 6.994-.101.582-.21 3.017-.193 3.346-.478 10.729 6.008 14.614 9.682 15.835-.101.034-.033.126-.235.117l-11.662-.522c-10.352-.472-20.572 6.986-20.572 19.669 0 10.517 8.524 17.933 18.844 18.439l-6.184-.287c-10.352-.455-19.103 7.695-19.582 18.22-.453 10.526 7.567 19.433 17.913 19.906-10.345-.472-19.121 7.677-19.573 18.203-.454 10.526 6.821 19.99 17.174 20.444l68.73 8.63s-14.324 23.959-14.324 59.455c0 23.664 16.905 26.848 26.848 26.848 7.821.002 9.927-15.151 9.927-15.151h.016c1.77-9.717 4.077-18.203 12.091-33.827 8.968-17.512 21.184-15.869 35.446-31.467 2.517-2.747 5.898-7.281 9.195-12.86.269-.295.521-.708.764-1.289.293-.69.646-1.172.956-1.812a102.669 102.669 0 0 0 1.61-3.059c8.826-8.827 22.579-7.925 28.435-7.925 11.746 0 17.898-6.825 17.898-17.898l.005-81.828c.002-12.423-5.082-16.614-17.902-16.614z" fill-rule="evenodd" clip-rule="evenodd"></path></svg>
+						</span>
+						<span class="item-label">Don't show again</span>
+					</li>
+				<li class="line"></li>
+					<li class="mantra-settings">
+						<span class="item-label no-icon">Mantra settings</span>
+					</li>
+			</ul>
+		</div>
+	</span>
+</span>
+</div></div>
+<div class="center-below"><div id="focuses" class="app-container focuses shadow" style=""><div class="focus-wrapper has-dash-icon"><div class="prompt" style=""><h3>What is your main focus for today?</h3>
+<input type="text" data-test="focus-input">
+</div></div>
+
+<div class="team-focus-wrapper"></div>
+
+<div class="focus-message-wrapper">
+	<div class="message focus-message" data-test="focus-message">
+		<i class="loading-icon"></i>Loading...
+	</div>
+</div>
+</div></div>
+<div class="bottom"><div class="app-container quote"><p class="quote-body">
+	<span class="quote-body-text">“Learn to enjoy every minute of your life. Be happy now. Don't wait for something outside of yourself to make you happy in the future.”</span><i class="icon-angle-right"></i>
+	<span class="quote-source">
+		<span class="quote-source-text">Earl Nightingale</span>
+			<span class="control control-heart" style="display: inline-block;">
+				<img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart-empty.svg" data-src="img/icon-heart-empty.svg" class="icon icon-dash-heart-empty">
+				<img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart.svg" data-src="img/icon-heart.svg" class="icon icon-dash-heart">
+			</span>
+		<span class="control control-skip" style="display: inline-block;">
+			<span class="icon-container">
+				<svg class="icon icon-skip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12"><circle cx="115.5" cy="108.62" r="23"></circle><path d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path><path class="arrow" d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)"></path></svg>
+			</span>
+		</span>
+		<span data-url="https://twitter.com/intent/tweet?text=%22Learn+to+enjoy+every+minute+of+your+life.+Be+happy+now.+Don%27t+wait+for+something+outside+of+yourself+to+make+you+happy+in+the+future.%22+%E2%80%94Earl+Nightingale&amp;via=momentumdash&amp;related=momentumdash,levibucsis,jaywaterman" class="control control-twitter">
+			<i class="icon icon-twitter"></i>
+		</span>
+	</span>
+</p>
+</div></div>
+<div class="bottom-right"><div id="notes" class="app-container notes" style=""><div class="app-wrapper app-placeholder nipple-bottom-right">
+	<div class="app " style="height:520px; width:550px">
+		<div class="app-placeholder-loading">
+			<i class="loading-icon"></i>Loading...
+		</div>
+	</div>
+</div>
+<span class="app-dash toggle Notes-toggle" data-test="notes-app-dash">Notes</span>
+</div><div id="todo" class="app-container todo" style=""><div class="app-wrapper app-placeholder nipple-bottom-right">
+	<div class="app todo-app" style="height:70px; width:320px">
+		<div class="app-placeholder-loading">
+			<i class="loading-icon"></i>Loading...
+		</div>
+	</div>
+</div>
+<span class="app-dash toggle Todo-toggle" data-test="todo-app-dash">Todo</span>
+</div></div>
+<div class="bottom-left" id="bottom-left"><div id="settings" class="app-container settings"><span class="app-dash toggle" data-test="settings-toggle"><svg class="toggle-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340.274 340.274"><path d="M293.629 127.806l-5.795-13.739c19.846-44.856 18.53-46.189 14.676-50.08l-25.353-24.77-2.516-2.12h-2.937c-1.549 0-6.173 0-44.712 17.48l-14.184-5.719c-18.332-45.444-20.212-45.444-25.58-45.444h-35.765c-5.362 0-7.446-.006-24.448 45.606l-14.123 5.734C86.848 43.757 71.574 38.19 67.452 38.19l-3.381.105-27.27 26.737c-4.138 3.891-5.582 5.263 15.402 49.425l-5.774 13.691C0 146.097 0 147.838 0 153.33v35.068c0 5.501 0 7.44 46.585 24.127l5.773 13.667c-19.843 44.832-18.51 46.178-14.655 50.032l25.353 24.8 2.522 2.168h2.951c1.525 0 6.092 0 44.685-17.516l14.159 5.758c18.335 45.438 20.218 45.427 25.598 45.427h35.771c5.47 0 7.41 0 24.463-45.589l14.195-5.74c26.014 11 41.253 16.585 45.349 16.585l3.404-.096 27.479-26.901c3.909-3.945 5.278-5.309-15.589-49.288l5.734-13.702c46.496-17.967 46.496-19.853 46.496-25.221V151.88c-.005-5.519-.005-7.446-46.644-24.074zM170.128 228.474c-32.798 0-59.504-26.187-59.504-58.364 0-32.153 26.707-58.315 59.504-58.315 32.78 0 59.43 26.168 59.43 58.315-.006 32.177-26.656 58.364-59.43 58.364z" fill="#FFF"></path></svg></span></div><div><div class="app-container background-info show-hover">
+	<span class="background-info-title">Seven Lakes Park, MI, USA</span>
+	<span class="background-info-source">
+		<span class="background-info-source-link" data-url="https://unsplash.com/photos/bDGlIcWpQIk">Photo by Aaron Burden / Unsplash</span>
+		<span class="control control-heart" style="display: inline-block;">
+			<img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart-empty.svg" data-src="img/icon-heart-empty.svg" class="icon icon-dash-heart-empty">
+			<img src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/img/icon-heart.svg" data-src="img/icon-heart.svg" class="icon icon-dash-heart">
+		</span>
+		<span class="control control-skip" title="Next Background" style="display: inline-block;">
+			<span class="icon-container">
+				<svg class="icon icon-skip" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 249.05 132.12"><circle cx="115.5" cy="108.62" r="23"></circle><path d="M291.5,281A22.5,22.5,0,1,1,269,303.5,22.52,22.52,0,0,1,291.5,281m0-1A23.5,23.5,0,1,0,315,303.5,23.5,23.5,0,0,0,291.5,280Z" transform="translate(-176 -194.88)"></path><path class="arrow" d="M399,257.5a135.18,135.18,0,0,0-41.16-42.17c-22.7-14.74-49.38-21.92-75.15-20.2a108.71,108.71,0,0,0-65.16,27c-19.91,17.5-33.76,41.79-41.18,72.19a13.52,13.52,0,0,0,9.92,16.32,13.66,13.66,0,0,0,3.21.38,13.51,13.51,0,0,0,13.11-10.3c6.07-24.92,17.1-44.54,32.76-58.31a82,82,0,0,1,49.13-20.32c20-1.33,40.81,4.32,58.65,15.9A108.07,108.07,0,0,1,374,268.51l-30,13.2,72.43,40.36,8.6-76Z" transform="translate(-176 -194.88)"></path></svg>
+			</span>
+		</span>
+	</span>
+</div></div></div>
+</div>
+<div class="overlay drop-overlay">
+<p>Drop to upload backgrounds <span class="badge plus-badge">PLUS</span></p>
+</div>
+</div>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/js/lib.min.js"></script>
+<script src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/app.min.js"></script>
+
+
+<script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/fb230b62-96ce-44b5-87c5-4a563553038b.js" id="fb230b62-96ce-44b5-87c5-4a563553038b"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/db430020-c088-4c07-8992-09ce22377120.js" id="db430020-c088-4c07-8992-09ce22377120"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/fb230b62-96ce-44b5-87c5-4a563553038f.js" id="fb230b62-96ce-44b5-87c5-4a563553038f"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/4535ae4c-33bd-4d4e-b92f-f1193d5060e0.js" id="4535ae4c-33bd-4d4e-b92f-f1193d5060e0"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/04b1458c-d424-4361-a5fe-eda80ce5a7b2.js" id="04b1458c-d424-4361-a5fe-eda80ce5a7b2"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/dd91d97e-fc83-4fca-b5cb-d89eb2e1dd0d.js" id="dd91d97e-fc83-4fca-b5cb-d89eb2e1dd0d"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/15ee3ec9-f912-485a-84be-a358e676d4a4.js" id="15ee3ec9-f912-485a-84be-a358e676d4a4"></script><script type="text/javascript" async="" src="chrome-extension://laookkfknpbbblfpciffpaejjkokdgca/app/ca27cf32-4c08-4e17-8efe-fe8bf27f3b8e.js" id="ca27cf32-4c08-4e17-8efe-fe8bf27f3b8e"></script></body></html>
