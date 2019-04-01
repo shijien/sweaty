@@ -6,7 +6,7 @@ class ExerciseMap extends React.Component {
     super(props);
     this.state = {
       polyline: "",
-      location: "Fill the city",
+      location: "",
       duration: 0,
       name: "",
       done: false,
@@ -45,9 +45,9 @@ class ExerciseMap extends React.Component {
       handleLocationError(false, infoWindow, map.getCenter());
     }
     let polyLine = new google.maps.Polyline({
-      strokeColor: "#7FFF00",
+      strokeColor: "#0000FF",
       strokeOpacity: 1.0,
-      strokeWeight: 3
+      strokeWeight: 7
     });
     polyLine.setMap(map);
     let service = new google.maps.DirectionsService();
