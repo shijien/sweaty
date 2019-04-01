@@ -3,6 +3,9 @@
   margin-top: 30px;
   border-bottom: 1px solid #D1D0CF;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .friends-nav-bar-body {

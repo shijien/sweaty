@@ -23,7 +23,7 @@
   background-repeat: no-repeat;
 }
 .search_modal {
-    width: 200px;
+    width: 225px;
     height: auto;
     background-color: white;
     margin-top: 28px;
@@ -31,6 +31,8 @@
     z-index: 100;
     border-radius: 3px;
     box-shadow: 0 0 2px black;
+    margin-right: 600px;
+    margin-top: -45px;
 }
 
 .search_item_container {
